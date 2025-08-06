@@ -1,0 +1,75 @@
+Incripción a Materias:
+Nombre de la App --> Materias+ (un nombre simple y facil de recordar que sugiere la funcionalidad de la app.)
+
+ Grupo e Integrantes
+- [Teran Joaquin 1]
+- [Lagos Emanuel 2]
+- [Antiñir Cristian 3]
+
+Objetivo de la App:
+[Facilitar el desarrollo para estudiar]
+
+Herramientas Utilizadas:
+- Canva.
+
+Descripción de Pantallas:
+
+### Pantalla 1: 
+[Pantallazo a lo que es la app y un login.]
+
+### Pantalla 2: 
+[Registro necesario para utilizar la app]
+
+### Pantalla 3: 
+[Mensaje "Registro exitoso" y pregunta si desea cerrar sesión o ver el programa a estudiar]
+
+### Pantalla 4: 
+[Si ingresa, nos da gusto que haya vuelto]
+
+### Pantalla 5: 
+[Pregunta como desea]
+
+### Pantalla 6: 
+[Selecciona las materias que el usuario necesita]
+
+### Pantalla 7: 
+[Solicitud para mesa de examen]
+
+### Pantalla 8: 
+[Cargado correctamente]
+
+### Pantalla 9: 
+[Horarios]
+
+### Pantalla 10: 
+[Horarios.pdf]
+
+### Pantalla 11: 
+[Cargado correctamente]
+
+### Pantalla 12: 
+[Inscripción a materia]
+
+### Pantalla 13: 
+[Programa]
+
+### Pantalla 14: 
+[Archivo programa.pdf]
+
+## Decisiones de Diseño:
+
+ Estilos Visuales
+Se eligieron estilos sencillos y amigables para facilitar la experiencia del usuario. Se priorizó:
+
+- Colores suaves: Para evitar fatiga visual.
+- Iconos claros: Para que el usuario comprenda las funciones rápidamente.
+- Fuentes legibles: Mejor lectura en distintas resoluciones y dispositivos.
+- Menor sobrecarga de información:Presentación simple y directa para que el usuario no se sienta abrumado.
+
+## Adaptaciones de Diseño:
+El diseño fue adaptado teniendo en cuenta principios de usabilidad y accesibilidad:
+
+- Interfaz limpia y organizada.
+- Íconos representativos para guiar al usuario.
+- Textos cortos y botones visibles.
+
