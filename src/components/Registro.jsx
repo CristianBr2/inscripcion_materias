@@ -24,7 +24,7 @@ function Registro() {
             <input
             type="text"
             required
-            onChange={(e) => setNombre(e.target.value)}  //al hacer clic sobre enviar, me lleva a "RegistroExitoso".
+            onChange={(e) => setNombre(e.target.value)}  
           />
 
 

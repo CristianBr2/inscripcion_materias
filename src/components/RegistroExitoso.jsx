@@ -7,6 +7,7 @@ function RegistroExitoso() {
     <>
      <h1>¡Registro Exitoso!</h1>
      <h2>Bienvenido {nombre}</h2>
+     <input type="submit" value="Siguiente" />
     </>
   );
 }

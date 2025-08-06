@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Registro from "./components/Registro";
 import RegistroExitoso from "./components/RegistroExitoso";
+import Servicios from "./components/Servicios";
 
 function App() {
   return (
