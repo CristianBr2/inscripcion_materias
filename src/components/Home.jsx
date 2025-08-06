@@ -3,7 +3,7 @@ import Login from "./Login";
 function Home() {
   return (
     <div>
-      <h1>Incripción a Materias</h1>
+      <h1>Inscripción a Materias</h1>
       <img
         src="https://static.vecteezy.com/system/resources/previews/011/157/541/non_2x/computer-dekstop-monitor-cartoon-icon-illustration-technology-object-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg"
         alt="Incripcion a materias"

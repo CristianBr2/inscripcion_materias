@@ -1,15 +1,32 @@
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 function Registro() {
+  const navigate = useNavigate();
+  const [nombre, setNombre] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aca puedo validar, guardar o enviar datos a una API si quiero.
+    navigate("/registro-exitoso", { state: { nombre } });
+  };
+
   return (
     <>
       <div className="Mayor">
         <div className="Medio">
           <h1>Registro</h1>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label>Apellido:</label>
             <input type="text" required />
 
             <label>Nombre:</label>
-            <input type="text" required />
+            <input
+            type="text"
+            required
+            onChange={(e) => setNombre(e.target.value)}  //al hacer clic sobre enviar, me lleva a "RegistroExitoso".
+          />
+
 
             <label>DNI:</label>
             <input
