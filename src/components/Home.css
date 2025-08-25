@@ -1,0 +1,149 @@
+/* src/components/Home.css */
+
+.home-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  /* El color de fondo superior (azul claro) */
+  background-color: #a7d9ed;
+  color: white; /* Color del texto para que contraste con el fondo */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la vista */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-elemento para crear la curva y el color de fondo inferior (azul oscuro) */
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #49a8f6; /* El color azul más oscuro de la curva */
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 80%);
+  z-index: 1; /* Le damos un z-index bajo para que quede detrás del contenido */
+}
+
+/* Estilos para el contenedor principal de la primera sección */
+.home-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+  position: relative;
+  z-index: 2; /* Aseguramos que el contenido esté por encima del fondo */
+}
+
+/* Contenedor para la imagen y el texto de aviso */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilo para el texto de aviso "TENER EN CUENTA..." */
+.notice-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la imagen del computador, ajustada para el diseño */
+.main-image {
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Contenedor del título principal */
+.right-content {
+  text-align: right;
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilos para el título principal "Inscripción a Materias" */
+.main-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Estilos para el nombre de la escuela y secciones siguientes */
+.school-name {
+  color: white;
+  margin-top: 50px;
+  /* Ajustes para el título "E.P.E.T N°20" */
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  color: red; /* Aquí está la corrección: el color ahora es rojo */
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.service-intro,
+.service-details p,
+.service-list li {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.service-details {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.service-list li {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid white;
+}
+
+/* Estilos para el carrusel y las flechas */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.school-image {
+  max-width: 600px;
+  height: auto;
+  border: 4px solid white;
+}
+
+.arrow {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 2rem;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
