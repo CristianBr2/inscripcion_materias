@@ -1,3 +1,5 @@
+import { auth, provider } from "../firebaseConfig";
+import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 // import "./Login.css";
 function Login() {
