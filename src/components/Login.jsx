@@ -35,12 +35,9 @@ function Login() {
           </form>
         </div>
       </div>
-      <div className="google">
-         <h2>¡Ingresa hoy mismo!</h2>
-            <button onClick={irARegistro}>Google</button>
-        {/* <button onClick={irARegistro} className="google-btn">
-            <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google" />Continuar con Google
-            </button> */}
+    <div className="google">
+        <h2>¡Ingresa hoy mismo!</h2>
+        <button onClick={handleGoogleLogin}>Google</button>
       </div>
     </>
   );
