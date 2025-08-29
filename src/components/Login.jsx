@@ -6,10 +6,18 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const irARegistro = () => {
-    navigate("/registro");
+  // funcionalidad: login con google
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log("Usuario autenticado:", result.user);
+        // redirige a la página de registro o dashboard
+        navigate("/registro", { state: { nombre: result.user.displayName } });
+      })
+      .catch((error) => {
+        console.error("Error al iniciar sesión con Google:", error);
+      });
   };
-
 
   return (
     <>
