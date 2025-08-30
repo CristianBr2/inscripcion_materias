@@ -3,7 +3,7 @@ import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 // import "./Login.css";
 function Login() {
-
+  
   const navigate = useNavigate();
 
   // funcionalidad: login con google

@@ -1,6 +1,6 @@
 // src/components/Home.jsx
 import Login from "./Login";
-import './Home.css';
+// import './Home.css';
 function Home() {
   return (
     <div className="home-container">
@@ -42,8 +42,9 @@ function Home() {
           <li>Los estudiantes egresados pueden pedir mesas para rendir cada un (1) mes en la fecha que ellos prefieran.</li>
         </ul>
       </div>
+      <Login/>  
     </div>
-  );
+);
 }
 
 export default Home;
