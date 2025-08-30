@@ -42,6 +42,7 @@ function Home() {
           <li>Los estudiantes egresados pueden pedir mesas para rendir cada un (1) mes en la fecha que ellos prefieran.</li>
         </ul>
       </div>
+      <Login/>
     </div>
   );
 }
