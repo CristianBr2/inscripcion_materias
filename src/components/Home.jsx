@@ -43,9 +43,8 @@ function Home() {
         </ul>
         <Login/>
       </div>
-      <Login/>  
-    </div>
-  );
-}
+      </div>    
+    );
+  }
 
 export default Home;

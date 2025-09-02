@@ -1,17 +1,16 @@
 import { auth, provider } from "../firebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-// import "./Login.css";
+
+import "./Login.css";
+
 function Login() {
-  
   const navigate = useNavigate();
 
-  // funcionalidad: login con google
   const handleGoogleLogin = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log("Usuario autenticado:", result.user);
-        // redirige a la página de registro o dashboard
         navigate("/registro", { state: { nombre: result.user.displayName } });
       })
       .catch((error) => {
@@ -20,10 +19,10 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="login-container">
       <div className="Mayor">
         <div className="Medio">
-          <h2>Iniciar sesion</h2>
+          <h2>Iniciar sesión</h2>
           <form>
             <label>Usuario:</label>
             <input type="text" required />
@@ -34,12 +33,15 @@ function Login() {
             <input type="submit" value="Iniciar" />
           </form>
         </div>
+        <div className="google">
+          <h2>¡Ingresa hoy mismo!</h2>
+          <button onClick={handleGoogleLogin}>
+            <img src="/img/imggogle.png" alt="Google" className="google-logo"/>
+            Google
+          </button>
+        </div>
       </div>
-    <div className="google">
-        <h2>¡Ingresa hoy mismo!</h2>
-        <button onClick={handleGoogleLogin}>Google</button>
-      </div>
-    </>
+    </div>
   );
 }
 
