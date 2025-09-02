@@ -1,0 +1,86 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.Mayor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  position: relative;
+  z-index: 2;
+}
+h2 {
+  color: rgb(146, 144, 144);
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+label {
+  color: rgb(78, 77, 77);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  font-weight: normal; /* Peso de fuente normal */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+input[type="text"], input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 1.1em;
+}
+input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.google {
+  text-align: center;
+  width: 350px; 
+  position: relative;
+  margin-top: 20px; 
+}
+.google h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color:rgb(65, 61, 61);
+}
+.google button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, color 0.3s;
+}
+.google button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.google-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; 
+  vertical-align: middle;
+}
