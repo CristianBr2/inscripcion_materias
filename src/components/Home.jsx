@@ -41,10 +41,11 @@ function Home() {
           <li>También permite seleccionar los programas de las materias adeudadas.</li>
           <li>Los estudiantes egresados pueden pedir mesas para rendir cada un (1) mes en la fecha que ellos prefieran.</li>
         </ul>
+        <Login/>
       </div>
       <Login/>  
     </div>
-);
+  );
 }
 
 export default Home;

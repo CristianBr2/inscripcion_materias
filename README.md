@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+Incripción a Materias:
+Nombre de la App --> Materias+ (un nombre simple y facil de recordar que sugiere la funcionalidad de la app.)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Grupo e Integrantes
+- [Teran Joaquin 1]
+- [Lagos Emanuel 2]
+- [Antiñir Cristian 3]
 
-## Available Scripts
+Objetivo de la App:
+[Facilitar el desarrollo para estudiar]
 
-In the project directory, you can run:
+Herramientas Utilizadas:
+- Canva.
 
-### `npm start`
+Descripción de Pantallas:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pantalla 1: 
+[Pantallazo a lo que es la app y un login.]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Pantalla 2: 
+[Registro necesario para utilizar la app]
 
-### `npm test`
+### Pantalla 3: 
+[Mensaje "Registro exitoso" y pregunta si desea cerrar sesión o ver el programa a estudiar]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pantalla 4: 
+[Despliegue para ver la cantidad de materias que ofrecemos y selección para ver el programa a estudiar]
+[Si ingresa, nos da gusto que haya vuelto]
 
-### `npm run build`
+### Pantalla 5: 
+[Pregunta como desea ver el programa que selecciono anteriormente (pantalla 4)]
+[Pregunta como desea]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pantalla 6: 
+[al ser 1 (una) materia, muestra el programa en la misma App]
+[Selecciona las materias que el usuario necesita]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pantalla 7: 
+[Solicitud para mesa de examen]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Pantalla 8: 
+[Cargado correctamente]
 
-### `npm run eject`
+### Pantalla 9: 
+[Horarios]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Pantalla 10: 
+[Horarios.pdf]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pantalla 11: 
+[Cargado correctamente]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Pantalla 12: 
+[Inscripción a materia]
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Pantalla 13: 
+[Programa]
 
-## Learn More
+### Pantalla 14: 
+[Archivo programa.pdf]
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Decisiones de Diseño:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ Estilos Visuales
+Se eligieron estilos sencillos y amigables para facilitar la experiencia del usuario. Se priorizó:
 
-### Code Splitting
+- Colores suaves: Para evitar fatiga visual.
+- Iconos claros: Para que el usuario comprenda las funciones rápidamente.
+- Fuentes legibles: Mejor lectura en distintas resoluciones y dispositivos.
+- Menor sobrecarga de información:Presentación simple y directa para que el usuario no se sienta abrumado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Adaptaciones de Diseño:
+El diseño fue adaptado teniendo en cuenta principios de usabilidad y accesibilidad:
 
-### Analyzing the Bundle Size
+- Interfaz limpia y organizada.
+- Íconos representativos para guiar al usuario.
+- Textos cortos y botones visibles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
