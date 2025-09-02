@@ -1,3 +1,4 @@
+import { auth, provider } from '../firebaseConfig';
 import { useNavigate } from "react-router-dom";
 // import "./Login.css";
 function Login() {
