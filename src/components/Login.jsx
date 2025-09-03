@@ -36,7 +36,7 @@ function Login() {
         <div className="google">
           <h2>¡Ingresa hoy mismo!</h2>
           <button onClick={handleGoogleLogin}>
-            <img src="/img/imggogle.png" alt="Google" className="google-logo"/>
+            <img src="/img/imggoogle.png" alt="Google" className="google-logo"/>
             Google
           </button>
         </div>
