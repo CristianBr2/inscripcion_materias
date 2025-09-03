@@ -1,3 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #a7d9ed;
+}
+
+
+.home-container {
+  background-color: #a7d9ed; /* mismo azul claro */
+}
+
+
 /* src/components/Home.css */
 
 .home-container {
