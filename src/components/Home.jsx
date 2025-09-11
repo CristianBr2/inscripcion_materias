@@ -8,7 +8,7 @@ function Home() {
         <div className="left-content">
           <img
             className="main-image"
-            src="/img/laptop-cartoon-2-vector.jpg"
+            src="/img/laptop-cartoon-2-vector.png"
             alt="Inscripción a materias"
           />
         </div>
