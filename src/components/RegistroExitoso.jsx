@@ -2,10 +2,12 @@ import { useLocation } from "react-router-dom";
 
 import { Box, Typography, GlobalStyles } from '@mui/material';
 import Button from '@mui/material/Button';
-
+import { useNavigate } from "react-router-dom";
 
 
 function RegistroExitoso() {
+  const navigate = useNavigate();
+
   const location = useLocation();
   const nombre = location.state?.nombre || "usuario";
     return (
@@ -71,7 +73,7 @@ function RegistroExitoso() {
       </Typography>
      
     <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 9 }}>
-      <Button
+      <Button onClick={() => navigate("/Servicios")}
         type="submit"
         variant="contained"
         color="primary"
@@ -88,6 +90,7 @@ function RegistroExitoso() {
             to: { opacity: 1, transform: 'translateY(0)' }
           }
         }}>
+          
         Siguiente
       </Button>
     </Box>

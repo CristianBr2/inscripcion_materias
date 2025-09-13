@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
-import { collection, query, where, orderBy, getDocs } from "firebase/firestore";
+import { collection, query, where, orderBy, getDocs, doc, onSnapshot } from "firebase/firestore";
 import { db } from "../firebaseConfig"; 
+
+//----------SUSCRIBIRSE A UN DOC------------
+
+function listenById(id, cb, errCb) {
+  const ref = doc(db, "mesa-examen", id);
+  return onSnapshot(ref, (d) => {
+    cb(d.exist() ? { id: d.id, ...d.data() } : null);
+  }, errCb);
+}
+
 
 function MesaExamen() {
   const [mesas, setMesas] = useState([]);
@@ -20,7 +30,7 @@ function MesaExamen() {
   return (
 <>
     <div>
-    <h2 style={{ textAlign: "center", marginTop: "20px" }}>Mesas de Examen Activas</h2>
+    <h2 style={{ textAlign: "center", marginTop: "20px", color:"black"}}>Mesas de Examen Activas</h2>
     <table border="1" style={{ margin: "0 auto", marginTop: "20px" }}>
         <thead>
           <tr>

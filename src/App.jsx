@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import Registro from "./components/Registro";
 import RegistroExitoso from "./components/RegistroExitoso";
 import Servicios from "./components/Servicios";
-import MesaExamen from "./components/MesaExamen";
+import UseMesaExamen from "./components/UseMesaExamen";
 
 function App() {
   return (
@@ -14,7 +14,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/registro-exitoso" element={<RegistroExitoso />} />
-        <Route path="/mesa-examen" element={<MesaExamen/>} />
+        <Route path="/servicios" element={<Servicios />} /> 
+        <Route path="/mesa-examen" element={<UseMesaExamen />} />
+        
       </Routes>
     </BrowserRouter>
   );
