@@ -16,13 +16,20 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         {/* { <Route path="/registro" element={<Registro />} /> } redirección libre */}
-        <Route path="/registro-exitoso" element={<RegistroExitoso />} />
-        <Route path="/servicios" element={<Servicios />} /> 
+        {/* <Route path="/registro-exitoso" element={<RegistroExitoso />} />
+        <Route path="/servicios" element={<Servicios />} />
         <Route path="/mesa-examen" element={<UseMesaExamen />} />
         <Route path="/alta-mesa" element={<AltaMesaExamen />} />
-        <Route path="/producto/:id" element={<Detalle />} />
+        <Route path="/producto/:id" element={<Detalle />} /> */}
+
         {/* redireccion bloqueada */}
-        <Route path="/registro" element={<RutaPrivada><Registro /></RutaPrivada>} /> 
+        
+        <Route path="/servicios" element={<RutaPrivada><Servicios /></RutaPrivada>}/> 
+        <Route path="/mesa-examen" element={<RutaPrivada><UseMesaExamen /></RutaPrivada>} />
+        <Route path="/alta-mesa" element={<RutaPrivada><AltaMesaExamen /></RutaPrivada>}/>
+        <Route path="/producto/:id" element={<RutaPrivada><Detalle /></RutaPrivada>} />
+        <Route path="/registro" element={<RutaPrivada><Registro /></RutaPrivada>} />
+        <Route path="/registro-exitoso" element={<RutaPrivada><RegistroExitoso /></RutaPrivada>}/>
 
 
       </Routes>
