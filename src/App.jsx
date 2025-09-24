@@ -6,6 +6,7 @@ import RegistroExitoso from "./components/RegistroExitoso";
 import Servicios from "./components/Servicios";
 import UseMesaExamen from "./components/UseMesaExamen";
 import AltaMesaExamen from "./components/AltaMesaExamen";
+import Detalle from "./components/Detalle"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/servicios" element={<Servicios />} /> 
         <Route path="/mesa-examen" element={<UseMesaExamen />} />
         <Route path="/alta-mesa" element={<AltaMesaExamen />} />
+        <Route path="/producto/:id" element={<Detalle />} />
       </Routes>
     </BrowserRouter>
   );
