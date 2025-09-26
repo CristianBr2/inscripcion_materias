@@ -1,15 +1,10 @@
 // src/firebaseConfig.js
 import { initializeApp } from "firebase/app";
-import { getFirestore, onSnapshot } from "firebase/firestore";  
+import { getFirestore } from "firebase/firestore";  
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-//import { getAnalytics } from "firebase/analytics";
+import { getAnalytics } from "firebase/analytics";
 
-function listenById(id, cb, errCb){
-  const ref = doc(db, "profesores", id);
-  return onSnapshot(ref, (d) =>{
-    cb(d.exists() ? { id: d.id, ...d.data()}: null);
-  }, errCb);
-}
+
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain:process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
