@@ -11,6 +11,8 @@ function Login() {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log("Usuario autenticado:", result.user);
+         localStorage.setItem("autenticado", "true");
+         
         navigate("/registro", { state: { nombre: result.user.displayName } });
       })
       .catch((error) => {
