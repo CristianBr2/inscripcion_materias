@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
-        <Route path="/registro-exitoso" element={<RegistroExitoso />} />
+        {/* <Route path="/registro-exitoso" element={<RegistroExitoso />} /> */}
         {/* <Route path="/mesa-examen" element={<MesaExamen/>} /> */}
          <Route path="/alumno" element={<Alumno/>} />
         {/* { <Route path="/registro" element={<Registro />} /> } redirección libre */}
