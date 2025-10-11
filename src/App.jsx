@@ -4,6 +4,8 @@ import Login from "./components/Login";
 import Registro from "./components/Registro";
 import RegistroExitoso from "./components/RegistroExitoso";
 import Servicios from "./components/Servicios";
+import MesaExamen from "./components/UseMesaExamen";
+import Alumno from "./components/Alumno";
 import UseMesaExamen from "./components/UseMesaExamen";
 import AltaMesaExamen from "./components/AltaMesaExamen";
 import Detalle from "./components/Detalle"
@@ -15,6 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        {/* <Route path="/registro" element={<Registro />} /> */}
+        {/* <Route path="/registro-exitoso" element={<RegistroExitoso />} /> */}
+        {/* <Route path="/mesa-examen" element={<MesaExamen/>} /> */}
+         {/* <Route path="/alumno" element={<Alumno/>} /> */}
         {/* { <Route path="/registro" element={<Registro />} /> } redirección libre */}
         {/* <Route path="/registro-exitoso" element={<RegistroExitoso />} />
         <Route path="/servicios" element={<Servicios />} />
@@ -23,13 +29,14 @@ function App() {
         <Route path="/producto/:id" element={<Detalle />} /> */}
 
         {/* redireccion bloqueada */}
-        
+        <Route path="/alumno" element={<RutaPrivada><Alumno/></RutaPrivada>} />
         <Route path="/servicios" element={<RutaPrivada><Servicios /></RutaPrivada>}/> 
         <Route path="/mesa-examen" element={<RutaPrivada><UseMesaExamen /></RutaPrivada>} />
         <Route path="/alta-mesa" element={<RutaPrivada><AltaMesaExamen /></RutaPrivada>}/>
         <Route path="/producto/:id" element={<RutaPrivada><Detalle /></RutaPrivada>} />
         <Route path="/registro" element={<RutaPrivada><Registro /></RutaPrivada>} />
         <Route path="/registro-exitoso" element={<RutaPrivada><RegistroExitoso /></RutaPrivada>}/>
+
 
 
       </Routes>
