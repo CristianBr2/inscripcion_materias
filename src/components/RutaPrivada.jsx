@@ -1,5 +1,7 @@
 import { Navigate } from "react-router-dom"; 
+import { useUser } from '../context/UserContext';
 
+const { user, loading } = useUser(); 
 function RutaPrivada({ children }) {
   const estaAutenticado = localStorage.getItem("autenticado") === "true";
   console.log("¿Autenticado?", estaAutenticado);
