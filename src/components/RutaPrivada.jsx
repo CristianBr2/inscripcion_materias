@@ -1,26 +1,20 @@
 import { Navigate } from "react-router-dom"; 
 import { useUser } from '../context/UserContext';
 
-const { user, loading } = useUser(); 
 function RutaPrivada({ children }) {
+  // ✅ SOLUCIÓN: La llamada al Hook 'useUser' debe ir DENTRO de la función.
+  const { user, loading } = useUser(); 
+  
+  // Tu lógica actual de autenticación (usando localStorage)
   const estaAutenticado = localStorage.getItem("autenticado") === "true";
+  
   console.log("¿Autenticado?", estaAutenticado);
+  
   if (estaAutenticado) {
     return children; // si estas logueado pasa
   } else {
-    return <Navigate to="/login" />;  //sino logueate
+    return <Navigate to="/login" />;  //sino logueate
   }
 }
 
 export default RutaPrivada;
-
-
-// crtl + shift + i
-
-// console:
-
-// 1 --> localStorage.clear() --> borrar todo
-
-// 2 --> localStorage --> verificar si se borro todo
-
-// 3 --> Storage {length: 0}  --> resultado si es que se borro todo

@@ -10,9 +10,10 @@ import UseMesaExamen from "./components/UseMesaExamen";
 import AltaMesaExamen from "./components/AltaMesaExamen";
 import Detalle from "./components/Detalle"
 import RutaPrivada from "./components/RutaPrivada";
-
+import { UserProvider } from './context/UserContext';
 function App() {
   return (
+    <UserProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -41,6 +42,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+    </UserProvider>
   );
 }
 
