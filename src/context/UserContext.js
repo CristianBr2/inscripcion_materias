@@ -1,7 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { onAuthStateChanged, signOut, signInWithEmailAndPassword } from 'firebase/auth'; 
-import { auth } from '../firebaseConfig';
-
+import { auth } from '../firebaseConfig'; // Rutas relativas
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => { 
