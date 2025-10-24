@@ -10,6 +10,8 @@ import UseMesaExamen from "./components/UseMesaExamen";
 import AltaMesaExamen from "./components/AltaMesaExamen";
 import Detalle from "./components/Detalle"
 import RutaPrivada from "./components/RutaPrivada";
+import Programa from "./components/Programa";
+import Horario from "./components/Horario";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
         <Route path="/producto/:id" element={<RutaPrivada><Detalle /></RutaPrivada>} />
         <Route path="/registro" element={<RutaPrivada><Registro /></RutaPrivada>} />
         <Route path="/registro-exitoso" element={<RutaPrivada><RegistroExitoso /></RutaPrivada>}/>
+        <Route path="/programa" element={<RutaPrivada><Programa /></RutaPrivada>} />
+        <Route path="/horario" element={<RutaPrivada><Horario /></RutaPrivada>} />
 
 
 
