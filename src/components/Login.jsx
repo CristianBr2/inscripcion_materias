@@ -2,8 +2,9 @@ import { auth, provider } from "../firebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { useUser } from '../context/UserContext';
 import "./Login.css";
+
 
 const VALID_USERS = [
   { username: "user1", password: "password123", displayName: "Usuario Uno" },
@@ -11,6 +12,7 @@ const VALID_USERS = [
 ];
 
 function Login() {
+  const { login } = useUser();
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

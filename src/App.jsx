@@ -8,21 +8,23 @@ import MesaExamen from "./components/UseMesaExamen";
 import Alumno from "./components/Alumno";
 import UseMesaExamen from "./components/UseMesaExamen";
 import AltaMesaExamen from "./components/AltaMesaExamen";
-import Detalle from "./components/Detalle"
+import Detalle from "./components/Detalle";
 import RutaPrivada from "./components/RutaPrivada";
 import Programa from "./components/Programa";
 import Horario from "./components/Horario";
+import { UserProvider } from './context/UserContext.js';
 
 function App() {
   return (
+    <UserProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/registro" element={<Registro />} />
-        <Route path="/registro-exitoso" element={<RegistroExitoso />} />
-        <Route path="/mesa-examen" element={<MesaExamen/>} />
-         <Route path="/alumno" element={<Alumno/>} />
+        {/* <Route path="/registro" element={<Registro />} /> */}
+        {/* <Route path="/registro-exitoso" element={<RegistroExitoso />} /> */}
+        {/* <Route path="/mesa-examen" element={<MesaExamen/>} /> */}
+         {/* <Route path="/alumno" element={<Alumno/>} /> */}
         {/* { <Route path="/registro" element={<Registro />} /> } redirección libre */}
         {/* <Route path="/registro-exitoso" element={<RegistroExitoso />} />
         <Route path="/servicios" element={<Servicios />} />
@@ -31,7 +33,7 @@ function App() {
         <Route path="/producto/:id" element={<Detalle />} /> */}
 
         {/* redireccion bloqueada */}
-        
+        <Route path="/alumno" element={<RutaPrivada><Alumno/></RutaPrivada>} />
         <Route path="/servicios" element={<RutaPrivada><Servicios /></RutaPrivada>}/> 
         <Route path="/mesa-examen" element={<RutaPrivada><UseMesaExamen /></RutaPrivada>} />
         <Route path="/alta-mesa" element={<RutaPrivada><AltaMesaExamen /></RutaPrivada>}/>
@@ -41,10 +43,11 @@ function App() {
         <Route path="/programa" element={<RutaPrivada><Programa /></RutaPrivada>} />
         <Route path="/horario" element={<RutaPrivada><Horario /></RutaPrivada>} />
 
-
+          
 
       </Routes>
     </BrowserRouter>
+    </UserProvider>
   );
 }
 
