@@ -1,16 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CargaCorrecta.css'; // Importa el CSS
+import './CargaCorrecta.css'; 
 
 function CargaCorrecta() {
     const navigate = useNavigate();
 
-    // Redirige al menú de servicios (/servicios)
     const handleInicioClick = () => {
         navigate('/servicios'); 
     };
     
-    // Vuelve a la página anterior (el formulario SolicitarMesa)
     const handleVolver = () => {
         navigate(-1); 
     };
@@ -22,15 +20,13 @@ function CargaCorrecta() {
                 
                 <div className="carga-correcta-button-group">
                     
-                    {/* Botón 1: Inicio */}
                     <button 
                         className="carga-correcta-button"
                         onClick={handleInicioClick}
                     >
                         Inicio
                     </button>
-                    
-                    {/* Botón 2: Volver */}
+                   
                     <button 
                         className="carga-correcta-button"
                         onClick={handleVolver}

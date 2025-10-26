@@ -1,20 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './InscripcionMateria.css';
+/*import './InscripcionMateria.css';*/
 
 function InscripcionMateria() {
     const navigate = useNavigate();
 
-    // Función para manejar el envío del formulario
+ 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Datos de inscripción enviados...');
         
-        // Redirigir a la pantalla de éxito
-        navigate('/inscripto-correctamente'); 
+   
+        navigate('/InscriptoCorrectamente'); 
     };
 
-    // Función para el botón "Volver"
+
     const handleVolver = () => {
         navigate(-1);
     };
@@ -35,7 +35,7 @@ function InscripcionMateria() {
             <div className="inscripcion-form-box">
                 <form onSubmit={handleSubmit}>
                     
-                    {/* Fila 1: Nombre y Apellido */}
+                  
                     <div className="form-row">
                         <div className="form-field half">
                             <label htmlFor="nombre">Nombre:</label>
@@ -47,7 +47,7 @@ function InscripcionMateria() {
                         </div>
                     </div>
 
-                    {/* Fila 2: Materia y DNI */}
+                 
                     <div className="form-row">
                         <div className="form-field half">
                             <label htmlFor="materia">Materia:</label>
@@ -63,7 +63,6 @@ function InscripcionMateria() {
                         </div>
                     </div>
 
-                    {/* Fila 3: Curso */}
                     <div className="form-row single-field">
                         <div className="form-field">
                             <label htmlFor="curso">Curso:</label>
@@ -71,7 +70,6 @@ function InscripcionMateria() {
                         </div>
                     </div>
 
-                    {/* Botón Enviar */}
                     <div className="form-submit">
                         <button type="submit" className="btn-enviar">Enviar</button>
                     </div>
@@ -82,8 +80,7 @@ function InscripcionMateria() {
             <p className="inscripcion-info-text">
                 Recuerde que los programas están en su respectiva sección.
             </p>
-            
-            {/* Botón Volver (posición flotante, estilizado en CSS) */}
+          
             <button onClick={handleVolver} className="btn-volver">Volver</button>
             
         </div>

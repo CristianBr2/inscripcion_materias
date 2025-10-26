@@ -15,7 +15,6 @@
     overflow: hidden;
 }
 
-/* Simulación de la forma de onda superior */
 .carga-correcta-container::before {
     content: '';
     position: absolute;
@@ -41,7 +40,6 @@
     font-weight: bold;
 }
 
-/* Contenedor para los botones */
 .carga-correcta-button-group {
     display: flex;
     gap: 20px;
@@ -49,13 +47,11 @@
 }
 
 .carga-correcta-button {
-    /* Estilo del botón ajustado para ser más grande y sólido (como los botones de Servicios) */
-    padding: 15px 40px; /* Más padding para hacerlo más grande */
-    width: 200px; /* Ancho fijo para uniformidad */
+    padding: 15px 40px; 
+    width: 200px; 
     font-size: 1.1em;
     color: white;
     
-    /* Azul sólido, similar al que se usa en los botones grandes de la pantalla Servicios */
     background-color: rgba(90, 160, 230, 0.9); 
     
     border: none;
@@ -63,12 +59,10 @@
     cursor: pointer;
     transition: background-color 0.3s;
     
-    /* Quitamos el subrayado y aumentamos el peso de la fuente para que se lea mejor */
     text-decoration: none; 
     font-weight: 500;
 }
 
 .carga-correcta-button:hover {
-    /* Efecto de brillo al pasar el ratón */
     filter: brightness(1.1);
 }

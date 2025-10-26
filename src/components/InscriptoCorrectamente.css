@@ -6,13 +6,11 @@
     align-items: center;
     text-align: center;
     
-    /* Estilos de fondo */
     background-color: #a7d9ed; 
     position: relative;
     overflow: hidden;
 }
 
-/* Simulación de la forma de onda inferior */
 .inscripto-correcto-container::before {
     content: '';
     position: absolute;

@@ -5,9 +5,8 @@ import './InscriptoCorrectamente.css';
 function InscriptoCorrectamente() {
     const navigate = useNavigate();
 
-    // Redirige al menú de servicios (/servicios)
     const handleInicioClick = () => {
-        navigate('/InscriptoCorrectamente'); 
+        navigate('/servicios'); 
     };
 
     return (

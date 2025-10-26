@@ -15,6 +15,8 @@ import SolicitarMesa from "./components/SolicitarMesa";
 import CargaCorrecta from "./components/CargaCorrecta";
 import InscripcionMateria from "./components/InscripcionMateria"; 
 import InscriptoCorrectamente from "./components/InscriptoCorrectamente";
+import Contacto from "./components/Contacto"; 
+import Gracias from "./components/Gracias"; 
 import { UserProvider } from './context/UserContext.js';
 
 function App() {
@@ -49,6 +51,8 @@ function App() {
         <Route path="/cargacorrecta" element={<RutaPrivada><CargaCorrecta /></RutaPrivada>} />
         <Route path="/InscripcionMateria" element={<RutaPrivada><InscripcionMateria /></RutaPrivada>} />
         <Route path="/InscriptoCorrectamente" element={<RutaPrivada><InscriptoCorrectamente /></RutaPrivada>} />
+        <Route path="/Contacto" element={<RutaPrivada><Contacto /></RutaPrivada>} />  
+        <Route path="/Gracias" element={<RutaPrivada><Gracias /></RutaPrivada>} />  
       </Routes>
     </BrowserRouter>
     </UserProvider>
