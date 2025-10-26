@@ -12,16 +12,10 @@ function Servicios() {
 
         <div className="servicios-button-grid">
           <button onClick={()=>navigate("/Programa")}>Ver programa</button>
-          
-          <button onClick={()=>navigate("/Solicitar")}>Solicitar mesa</button>
-          
+          <button onClick={()=>navigate("/solicitarmesa")}>Solicitar mesa</button>
           <button onClick={()=>navigate("/Horario")}>Hs profesores</button>
-          
-    
           <button onClick={() => navigate("/problema")}>Tengo un problema</button>
-          
           <button onClick={()=>navigate("/Inscripcion")}>Inscribirme a materias</button>
-          
         </div>
       </div>
     </div>

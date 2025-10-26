@@ -1,5 +1,3 @@
-// Programa.jsx (FINAL CON DATOS COMPLETOS)
-
 import React, { useState } from 'react';
 import './Programa.css';
 import { useNavigate } from "react-router-dom"; 
@@ -11,7 +9,7 @@ function Programa() {
     const [materiaSeleccionada, setMateriaSeleccionada] = useState(null); 
     const [opcionesVisibles, setOpcionesVisibles] = useState(false);
 
-    // 🚨 DATOS COMPLETOS DE TODOS LOS PROGRAMAS 🚨
+    
     const programas = {
         "1 - Programación": [
             ["Unidad 1", "Introducción a JavaScript", "Variables, Tipos de datos, Operadores, Scope."],
@@ -58,7 +56,7 @@ function Programa() {
         ],
     };
     
-    // Lista de materias (ahora se genera directamente del objeto programas, eliminando la duplicación)
+    
     const materias = Object.keys(programas);
 
 
@@ -79,35 +77,35 @@ function Programa() {
 
         const doc = new jsPDF();
         const materia = materiaSeleccionada;
-        // Ahora, como todas las materias están definidas, este fallback solo es de seguridad
+       
         const programaData = programas[materia] || [
             ["Error", "Programa no disponible", "No se encontraron datos para esta materia. Comuníquese con la secretaría."]
         ];
         
-        // Título del documento
+        
         doc.setFontSize(18);
         doc.text(`Programa de la Materia: ${materia}`, 14, 22);
 
-        // Generar la tabla con jspdf-autotable
+        
         autoTable(doc, {
             head: [['Unidad', 'Tema Principal', 'Contenidos']],
             body: programaData,
             startY: 30,
             theme: 'striped',
-            headStyles: { fillColor: [50, 100, 150] }, // Color azul oscuro para el encabezado
+            headStyles: { fillColor: [50, 100, 150] }, 
             styles: { fontSize: 10, cellPadding: 3 },
         });
 
-        // Nombre del archivo y descarga
+    
         doc.save(`Programa_${materia.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`);
     };
 
     return (
         <div className="programa-container">
-            {/* INICIO DE programa-content: Contiene el selector y la lista */}
+            
             <div className="programa-content">
                 
-                {/* --- Selector de Materia (Centrado) --- */}
+               
                 <div 
                     className={`materia-selector ${opcionesVisibles ? 'active' : ''}`}
                     onClick={handleToggleOpciones}
@@ -118,7 +116,7 @@ function Programa() {
                     <span className="selector-icon"></span>
                 </div>
                 
-                {/* --- Caja de Opciones de Materia (Solo visible si opcionesVisibles es true) --- */}
+    
                 {opcionesVisibles && (
                     <div className="opciones-box">
                         <ul className="opciones-list">
@@ -137,7 +135,7 @@ function Programa() {
                 )}
             </div>
             
-            {/* --- Botones Inferiores (ANCLADO CON CSS FIXED) --- */}
+           
             <div className="botones-footer"> 
                 <button 
                     className="btn-volver" 

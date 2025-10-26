@@ -4,7 +4,6 @@ import Login from "./components/Login";
 import Registro from "./components/Registro";
 import RegistroExitoso from "./components/RegistroExitoso";
 import Servicios from "./components/Servicios";
-import MesaExamen from "./components/UseMesaExamen";
 import Alumno from "./components/Alumno";
 import UseMesaExamen from "./components/UseMesaExamen";
 import AltaMesaExamen from "./components/AltaMesaExamen";
@@ -12,6 +11,10 @@ import Detalle from "./components/Detalle";
 import RutaPrivada from "./components/RutaPrivada";
 import Programa from "./components/Programa";
 import Horario from "./components/Horario";
+import SolicitarMesa from "./components/SolicitarMesa";
+import CargaCorrecta from "./components/CargaCorrecta";
+import InscripcionMateria from "./components/InscripcionMateria"; 
+import InscriptoCorrectamente from "./components/InscriptoCorrectamente";
 import { UserProvider } from './context/UserContext.js';
 
 function App() {
@@ -42,9 +45,10 @@ function App() {
         <Route path="/registro-exitoso" element={<RutaPrivada><RegistroExitoso /></RutaPrivada>}/>
         <Route path="/programa" element={<RutaPrivada><Programa /></RutaPrivada>} />
         <Route path="/horario" element={<RutaPrivada><Horario /></RutaPrivada>} />
-
-          
-
+        <Route path="/solicitarmesa" element={<RutaPrivada><SolicitarMesa /></RutaPrivada>} />
+        <Route path="/cargacorrecta" element={<RutaPrivada><CargaCorrecta /></RutaPrivada>} />
+        <Route path="/InscripcionMateria" element={<RutaPrivada><InscripcionMateria /></RutaPrivada>} />
+        <Route path="/InscriptoCorrectamente" element={<RutaPrivada><InscriptoCorrectamente /></RutaPrivada>} />
       </Routes>
     </BrowserRouter>
     </UserProvider>
