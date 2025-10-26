@@ -1,0 +1,74 @@
+.carga-correcta-container {
+    font-family: Arial, sans-serif; 
+    background-color: #a7d9ed; 
+    color: white; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    
+    padding: 0;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: hidden;
+}
+
+/* Simulación de la forma de onda superior */
+.carga-correcta-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #49a8f6;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 80%);
+    z-index: 1; 
+}
+
+.carga-correcta-content {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+}
+
+.carga-correcta-title {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* Contenedor para los botones */
+.carga-correcta-button-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.carga-correcta-button {
+    /* Estilo del botón ajustado para ser más grande y sólido (como los botones de Servicios) */
+    padding: 15px 40px; /* Más padding para hacerlo más grande */
+    width: 200px; /* Ancho fijo para uniformidad */
+    font-size: 1.1em;
+    color: white;
+    
+    /* Azul sólido, similar al que se usa en los botones grandes de la pantalla Servicios */
+    background-color: rgba(90, 160, 230, 0.9); 
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    /* Quitamos el subrayado y aumentamos el peso de la fuente para que se lea mejor */
+    text-decoration: none; 
+    font-weight: 500;
+}
+
+.carga-correcta-button:hover {
+    /* Efecto de brillo al pasar el ratón */
+    filter: brightness(1.1);
+}

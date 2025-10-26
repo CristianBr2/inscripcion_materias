@@ -1,0 +1,55 @@
+.inscripto-correcto-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Estilos de fondo */
+    background-color: #a7d9ed; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Simulación de la forma de onda inferior */
+.inscripto-correcto-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: #49a8f6;
+    clip-path: polygon(0 50%, 100% 70%, 100% 100%, 0% 100%);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.inscripto-correcto-content {
+    z-index: 10;
+    padding: 20px;
+}
+
+.inscripto-correcto-title {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.inscripto-correcto-button {
+    padding: 10px 40px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #72b0e6; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: underline;
+}
+
+.inscripto-correcto-button:hover {
+    filter: brightness(1.1);
+}
