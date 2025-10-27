@@ -59,3 +59,12 @@ h1{
 .formulario-contacto button{
     margin-top: 5vh;
 }
+
+.formulario-contacto{   
+    width: 350px;
+    height: 330px;
+    padding: 20px;
+    color:grey;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(3, 52, 84, 0.519);
+}
