@@ -1,0 +1,122 @@
+.fondo{
+    display: flex;
+    margin-top:23vh;
+    height: 400px;
+    margin-top: 6vh;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    display: flex;
+    margin-top: 7vh;
+    color:white;
+    font-size: 7vh;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+p{
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+    color:rgb(129, 126, 126);
+} 
+
+
+label{
+    color:white;
+}
+
+.solicitarMesa{
+    background-color: transparent;
+}
+
+.contenedorMayor{
+    font-family: Arial, sans-serif; 
+    /* El color de fondo superior (azul claro) */
+    background-color: #a7d9ed; 
+    color: white; /* Color del texto para que contraste con el fondo */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: hidden;
+}
+
+.contenedorMayor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #49a8f6; /* El color azul más oscuro de la curva */
+    /* **LA CLAVE DEL DISEÑO DE OLA:** */
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 80%);
+    z-index: 1; 
+}
+button {
+    background-color:#49a8f6;
+    color:white;
+    font-size: 2.5vh;
+    border-radius: 80px 20px;
+    border-style: none;
+    outline:none;
+}
+
+.botonVolver {
+  position: fixed;
+  right: 70px;
+  bottom: 30px;  
+}
+
+button:hover{
+    background-color: #0056b3;
+    cursor:pointer;
+}
+
+.campo-materia select{
+    margin-left: 2vh;
+    margin-top: 1vh;
+    background-color: rgba(128, 128, 128, 0.185);
+    border:none;
+    color:white;
+    font-size: 2vh;
+    border-radius: 5px;
+}
+
+.campo-fecha input{
+    background-color:  rgba(128, 128, 128, 0.382);
+    font-size: 2vh;
+    color:white;
+}
+
+.spinner {
+  margin: 10px auto 0 auto;
+  width: 40px;
+  height: 40px;
+  border: 5px solid lightgray;
+  border-top: 5px solid #007bff; /* color azul */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animación de giro */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
