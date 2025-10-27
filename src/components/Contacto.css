@@ -11,3 +11,15 @@
     position: relative; 
     overflow: hidden;
 }
+
+.contacto-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #49a8f6; 
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 80%);
+    z-index: 1; 
+}
