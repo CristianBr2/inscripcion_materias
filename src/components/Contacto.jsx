@@ -65,6 +65,11 @@ function Contacto() {
                     </button>
 
                 </form>
+
+                <div className='botonVolver'>
+                    <button onClick={handleVolver} style={{ padding: '8px 15px' }}>Volver</button>
+                 </div>
+
                 </div>
             </div>
         </div>
