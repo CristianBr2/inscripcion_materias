@@ -50,12 +50,20 @@ function Contacto() {
                             rows="5" 
                             placeholder="Tu texto aquí..." 
                             required
+                            value={mensaje}
+                            onChange={(e) => setMensaje(e.target.value)} 
                         ></textarea>
                     </div>
                     
+                    <div style={{ marginTop: 10, textAlign: 'center' }}>
+                    {loading && <div className="spinner" aria-label="Cargando"></div>}
+                    {success && <div id="mensaje-exito" style={{ color: 'green', fontSize: '2vh' }}>¡Mensaje enviado con éxito!</div>}
+                    </div>
+
                     <button type="submit" className="btn-enviar">
                         Enviar
                     </button>
+
                 </form>
                 </div>
             </div>
