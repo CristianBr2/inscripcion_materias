@@ -68,3 +68,15 @@ h1{
     border-radius: 5px;
     box-shadow: 2px 2px 6px rgba(3, 52, 84, 0.519);
 }
+
+.formulario-contacto input{
+    background-color: transparent;
+    border:none;
+    outline: none;
+}
+
+.formulario-contacto textarea{
+    background-color: rgba(255, 255, 255, 0.438);
+    border:none;
+
+}
