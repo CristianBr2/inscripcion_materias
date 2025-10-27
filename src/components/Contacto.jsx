@@ -13,13 +13,15 @@ function Contacto() {
     };
 
     return (
+        <>
         <div className="contacto-container">
+            <h1>Contacto</h1>
             <div className="contacto-box"> 
-                <h1>Contacto</h1>
-                <form onSubmit={handleSubmit}>
+                <div className='fondo-contacto'>
+                <form className='formulario-contacto' onSubmit={handleSubmit}>
                     <div className="form-field">
                         <label htmlFor="correo">Correo:</label>
-                        <input type="email" id="correo" name="correo" required />
+                        <input type="email" id="correo" name="correo" required style={{borderBottom: '1px solid black'}} />
                     </div>
                     
                     <div className="form-field">
@@ -37,8 +39,10 @@ function Contacto() {
                         Enviar
                     </button>
                 </form>
+                </div>
             </div>
         </div>
+        </>
     );
 }
 
