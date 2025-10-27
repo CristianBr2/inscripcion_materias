@@ -1,0 +1,25 @@
+.inscripcion-materia-container{
+    font-family: Arial, sans-serif; 
+    background-color: #a7d9ed; 
+    color: white; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: hidden;
+}
+
+.inscripcion-form-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #49a8f6; 
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 80%);
+    z-index: 1; 
+}
