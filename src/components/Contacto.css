@@ -1,0 +1,13 @@
+.contacto-container{
+    font-family: Arial, sans-serif; 
+    background-color: #a7d9ed; 
+    color: white; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: hidden;
+}
