@@ -39,7 +39,7 @@ function Contacto() {
                 <form className='formulario-contacto' onSubmit={handleSubmit}>
                     <div className="form-field">
                         <label htmlFor="correo">Correo:</label>
-                        <input type="email" id="correo" name="correo" required style={{borderBottom: '1px solid black'}} />
+                        <input type="email" id="correo" value={correo} name="correo"  onChange={(e) => setCorreo(e.target.value)} required style={{borderBottom: '1px solid black'}} />
                     </div>
                     
                     <div className="form-field">
