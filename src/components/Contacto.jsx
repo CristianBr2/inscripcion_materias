@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Contacto.css';
 
 function Contacto() {
+
     const navigate = useNavigate();
+    const [correo, setCorreo] = useState('');
+    const [mensaje, setMensaje] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Formulario de Contacto enviado. Redirigiendo a Gracias...');
-        
-        navigate('/Gracias'); 
+
+        setSuccess(false);
+        setLoading(true);
+
+        setTimeout(() => {
+        setLoading(false);
+        setSuccess(true); 
+        e.target.reset();
+
+        setTimeout(() => navigate('/Gracias'), 1000);
+        }, 2000);
     };
+
+    const handleVolver = () => navigate(-1);
+
 
     return (
         <>
