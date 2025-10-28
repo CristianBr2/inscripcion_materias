@@ -22,6 +22,8 @@ function Registro() {
   const [curso, setCurso] = useState('');
   const [telefono, setTelefono] = useState('');
   const [materias, setMaterias] = useState('');
+  const [password, setPassword] = useState('');
+
   
 
   const handleSubmit = async (e) => {
