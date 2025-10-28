@@ -13,6 +13,9 @@ import { useEffect } from "react";
       return;
     }  
 
+    const docRef = doc(db, "Usuario_Nuevo", user.uid);
+    const docSnap = await getDoc(docRef);
+
     }
   })
 
