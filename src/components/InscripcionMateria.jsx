@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-/*import './InscripcionMateria.css';*/
+import './InscripcionMateria.css';
 
 function InscripcionMateria() {
     const navigate = useNavigate();
