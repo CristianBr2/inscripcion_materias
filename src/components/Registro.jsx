@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db, auth } from '../firebaseConfig'; 
 import { doc, setDoc } from "firebase/firestore";
-import { EmailAuthProvider } from 'firebase/auth';
+import { linkWithCredential, EmailAuthProvider } from "firebase/auth";
+
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -57,11 +58,12 @@ function Registro() {
 
     try {
       
-      if (password && password.length>=8){
+      if (password && password.length >= 8) {
         const credential = EmailAuthProvider.credential(user.email, password);
-        await user.linkWithCredential(credential);
-        console.log("Contraseña vinculada")
+        await linkWithCredential(user, credential);
+        console.log("Contraseña vinculada");
       }
+
 
       const docRef = doc(db, "Usuario_Nuevo", user.uid);
       await setDoc(docRef, {
