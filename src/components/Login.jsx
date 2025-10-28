@@ -68,7 +68,10 @@ function Login() {
         navigate("/registro", { state: { nombre: user.displayName || user.email } });
       } else {
         navigate("/servicios");
-      }
+      } catch (err) {
+      console.error(err);
+      setError("Usuario o contraseña incorrectos.");
+    }
     }
 
     
