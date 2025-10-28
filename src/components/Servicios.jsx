@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import './Servicios.css';
 import { auth, db } from "../firebaseConfig";
+import { doc, getDoc } from "firebase/firestore";
+
 
 
 function Servicios() {
