@@ -54,11 +54,11 @@ function InscripcionMateria() {
                     <div className="form-row">
                         <div className="form-field half">
                             <label htmlFor="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" className="input-line" />
+                            <input type="text" id="nombre" value={nombre} name="nombre" onChange={(e) => setNombre(e.target.value)} required className="input-line" />
                         </div>
                         <div className="form-field half">
                             <label htmlFor="apellido">Apellido:</label>
-                            <input type="text" id="apellido" name="apellido" className="input-line" />
+                            <input type="text" id="apellido" value={apellido} name="apellido" onChange={(e) => setApellido(e.target.value)} required className="input-line" />
                         </div>
                     </div>
 
@@ -66,7 +66,7 @@ function InscripcionMateria() {
                     <div className="form-row">
                         <div className="form-field half">
                             <label htmlFor="materia">Materia:</label>
-                            <select id="materia" name="materia" className="input-line select-input">
+                            <select id="materia" name="materia"  value={materia} onChange={(e) => setMateria(e.target.value)} required className="input-line select-input">
                                 {opcionesMateria.map((opcion, index) => (
                                     <option key={index} value={opcion}>{opcion}</option>
                                 ))}
@@ -74,15 +74,20 @@ function InscripcionMateria() {
                         </div>
                         <div className="form-field half">
                             <label htmlFor="dni">DNI:</label>
-                            <input type="text" id="dni" name="dni" className="input-line" />
+                            <input type="text" id="dni" name="dni" value={dni} onChange={(e) => setDni(e.target.value)} required className="input-line" />
                         </div>
                     </div>
 
                     <div className="form-row single-field">
                         <div className="form-field">
                             <label htmlFor="curso">Curso:</label>
-                            <input type="text" id="curso" name="curso" className="input-line short-line" />
+                            <input type="text" id="curso" name="curso" value={curso} onChange={(e) => setCurso(e.target.value)} required className="input-line short-line" />
                         </div>
+                    </div>
+                    
+                    <div style={{ marginTop: 10, textAlign: 'center' }}>
+                    {loading && <div className="spinner" aria-label="Cargando"></div>}
+                    {success && <div id="mensaje-exito" style={{ color: 'green', fontSize: '2vh' }}>¡Mensaje enviado con éxito!</div>}
                     </div>
 
                    <div className="form-submit">
