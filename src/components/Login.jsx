@@ -32,6 +32,9 @@ function Login() {
       }else{
         navigate("/servicios");
       }
+    }catch (error) {
+      console.error("error al iniciar sesión con Google: ", error);
+      setError("refresque e intente nuevamente");
     }
   };
 
