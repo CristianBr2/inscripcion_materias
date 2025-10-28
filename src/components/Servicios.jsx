@@ -4,6 +4,10 @@ import { auth, db } from "../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect } from "react";
 
+
+function Servicios() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const verificarRegistro = async () => {
     const user = auth.currentUser; 
@@ -18,10 +22,6 @@ import { useEffect } from "react";
 
     }
   })
-
-
-function Servicios() {
-  const navigate = useNavigate();
 
   return (
     <div className="servicios-container">
