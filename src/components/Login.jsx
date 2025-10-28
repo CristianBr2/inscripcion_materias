@@ -29,6 +29,8 @@ function Login() {
         navigate("/registro", {state: {nombre: user.displayName} });
       } else if (!docSnap.data().registrado){
         navigate("/registro", {state: { nombre: user.displayName} });
+      }else{
+        navigate("/servicios");
       }
     }
   };
