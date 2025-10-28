@@ -60,6 +60,11 @@ function Login() {
     
       const docRef = doc(db, "Usuario_Nuevo", user.uid);
       const docSnap = await getDoc(docRef);
+
+      if (!docSnap.exists()) {
+        await setDoc(docRef, { uid: user.uid, nombre: user.displayName || user.email, registrado: false });
+        navigate("/registro", { state: { nombre: user.displayName || user.email } });
+      } 
     }
 
     
