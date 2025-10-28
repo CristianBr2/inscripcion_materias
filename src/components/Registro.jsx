@@ -54,7 +54,8 @@ function Registro() {
 
     try {
       
-      const docRef = await addDoc(collection(db, "Usuario_Nuevo"), {
+      const docRef = doc(db, "Usuario_Nuevo", user.uid);
+      await setDoc(docRef, {
         uid:user.uid,
         nombre,
         apellido,
