@@ -19,6 +19,11 @@ function Login() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       console.log("Usuario autenticado con Google: ",user);
+
+      const docRef = doc(db, "Usuario_Nuevo", user.uid);
+      const docSnap = await getDoc(docRef);
+
+      
     }
   };
 
