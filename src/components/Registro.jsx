@@ -29,6 +29,22 @@ function Registro() {
 
     e.preventDefault();
 
+    if (dni.length!==8){
+      alert('El DNI debe ser de 8 dígitos.')
+      return
+    }
+
+    if (telefono.length!==10){
+      alert('El telefono debe ser de 10 dígitos.')
+      return
+    }
+
+    const materiasNum = Number(materias);
+    if (!materiasNum || materiasNum < 1 || materiasNum > 5) {
+    alert("Materias debe ser un número entre 1 y 5.");
+    return;
+  } 
+
     try {
       
       const docRef = await addDoc(collection(db, "Usuario_Nuevo"), {
