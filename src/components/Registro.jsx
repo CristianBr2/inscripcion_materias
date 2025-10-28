@@ -161,7 +161,11 @@ function Registro() {
       onChange={(e) => setNombre(e.target.value)} 
       />
      
-      <TextField label="Apellido" required sx={{ width: 300 }} />
+      <TextField 
+      label="Apellido" 
+      required sx={{ width: 300 }}
+      onChange={(e) => setApellido(e.target.value)}
+     />
     </Box>
 
     {/* dni y curso */}
@@ -171,13 +175,15 @@ function Registro() {
         required
         sx={{ width: 300 }}
         type="text"
+        value={dni}
         inputMode="numeric"
         inputProps={{
           pattern: '[0-9]*',
           maxLength: 8,
         }}
         onInput={(e) => {
-          e.target.value = e.target.value.replace(/[^0-9]/g, '');
+           const valor = e.target.value.replace(/[^0-9]/g, ''); 
+          setDni(valor);
         }}
       />
 
@@ -186,7 +192,8 @@ function Registro() {
         label="Curso"
         required
         sx={{ width: 300 }}
-        defaultValue=""
+        value={curso}
+        onChange={(e) => setCurso(e.target.value)}
       >
         {cursos.map((curso, index) => (
           <MenuItem key={index} value={curso}>
@@ -203,14 +210,15 @@ function Registro() {
         required
         sx={{ width: 300 }}
         type="text"
+        value={telefono}
         inputProps={{
-          inputMode: 'numeric',
           pattern: '[0-9]*',
           maxLength: 10,
         }}
-        onInput={(e) => {
-          e.target.value = e.target.value.replace(/[^0-9]/g, '');
-        }}
+        onInput={(e) => 
+          setTelefono(e.target.value.replace(/[^0-9]/g, '').slice(0, 10))
+        }
+
       />
 
       <TextField
@@ -219,6 +227,8 @@ function Registro() {
         inputProps={{ maxLength: 1 }}
         placeholder="min: 1 & max: 5"
         sx={{ width: 300 }}
+        value={materias}
+        onChange={(e) => setMaterias(e.target.value)}
       />
     </Box>
 
