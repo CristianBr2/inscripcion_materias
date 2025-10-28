@@ -22,11 +22,19 @@ function Registro() {
   const [curso, setCurso] = useState('');
   const [telefono, setTelefono] = useState('');
   const [materias, setMaterias] = useState('');
-
+  
 
   const handleSubmit = async (e) => {
 
     e.preventDefault();
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Debes iniciar sesión primero");
+      navigate("/login");
+      return;
+    }
 
     if (dni.length!==8){
       alert('El DNI debe ser de 8 dígitos.')
