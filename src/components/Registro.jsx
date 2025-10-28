@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { db } from '../firebaseConfig'; 
+import { db, auth } from '../firebaseConfig'; 
 import { collection, addDoc } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
-
-
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
