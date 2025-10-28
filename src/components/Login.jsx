@@ -53,6 +53,12 @@ function Login() {
       return; 
     }
     
+    try{
+      await signInWithEmailAndPassword(auth, username, password);
+      const user=auth.currentUser;
+      console.log("usuario autenticado (Email/Pasword):", user.email);
+    }
+
     const userFound = VALID_USERS.find(
       (user) => user.username === username && user.password === password
     );
