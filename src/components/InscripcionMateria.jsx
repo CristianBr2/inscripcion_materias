@@ -3,8 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import './InscripcionMateria.css';
 
 function InscripcionMateria() {
-    const navigate = useNavigate();
 
+    const navigate = useNavigate();
+    const [nombre, setNombre] = useState('');
+    const [apellido, setApellido] = useState('');
+    const [materia, setMateria] = useState('');
+    const [dni, setDni] = useState('');
+    const [curso, setCurso] = useState('');
  
     const handleSubmit = (e) => {
         e.preventDefault();
