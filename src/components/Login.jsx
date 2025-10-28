@@ -1,4 +1,4 @@
-import { auth, provider } from "../firebaseConfig";
+import { auth, provider, db } from "../firebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
