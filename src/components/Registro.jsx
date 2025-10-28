@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db, auth } from '../firebaseConfig'; 
 import { doc, setDoc } from "firebase/firestore";
+import { EmailAuthProvider } from 'firebase/auth';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
