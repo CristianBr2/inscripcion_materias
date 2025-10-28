@@ -64,7 +64,9 @@ function Login() {
       if (!docSnap.exists()) {
         await setDoc(docRef, { uid: user.uid, nombre: user.displayName || user.email, registrado: false });
         navigate("/registro", { state: { nombre: user.displayName || user.email } });
-      } 
+      } else if (!docSnap.data().registrado) {
+        navigate("/registro", { state: { nombre: user.displayName || user.email } });
+      }
     }
 
     
