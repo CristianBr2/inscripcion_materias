@@ -18,11 +18,45 @@ const cursos = ['1° 1', '1° 2', '1° 3', '1° 4',
 function Registro() {
   const navigate = useNavigate();
   const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState('');
+  const [dni, setDni] = useState('');
+  const [curso, setCurso] = useState('');
+  const [telefono, setTelefono] = useState('');
+  const [materias, setMaterias] = useState('');
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
+
     e.preventDefault();
-    // Aca puedo validar, guardar o enviar datos a una API si quiero.
+
+    try {
+      
+      const docRef = await addDoc(collection(db, "Usuario_Nuevo"), {
+        nombre,
+        apellido,
+        dni,
+        curso,
+        telefono,
+        materias,
+      });
+
+      console.log("Usuario nuevo, agregado con ID:", docRef.id);
+
+      setNombre('');
+      setApellido('');
+      setCurso('');
+      setDni('');
+      setTelefono('');
+      setMaterias('');
+
+      alert("Usuario nuevo agregado correctamente ✅");
+
+      // Aca puedo validar, guardar o enviar datos a una API si quiero.
     navigate("/registro-exitoso", { state: { nombre } });
+
+    } catch (error) {
+      console.error("Error al agregar usuario:", error);
+    }
   };
 
   return (
