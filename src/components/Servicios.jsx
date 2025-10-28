@@ -4,6 +4,12 @@ import { auth, db } from "../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect } from "react";
 
+  useEffect(() => {
+    const verificarRegistro = async () => {
+     const user = auth.currentUser; 
+    }
+  })
+
 
 function Servicios() {
   const navigate = useNavigate();
