@@ -258,6 +258,15 @@ function Registro() {
       />
     </Box>
 
+    <TextField
+      label="Crear contraseña (opcional)"
+      type="password"
+      sx={{ width: 300 }}
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      placeholder="Mínimo 6 caracteres"
+    />
+   
     <Button
       type="submit"
       variant="contained"
