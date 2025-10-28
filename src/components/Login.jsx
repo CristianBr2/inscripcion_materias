@@ -66,6 +66,8 @@ function Login() {
         navigate("/registro", { state: { nombre: user.displayName || user.email } });
       } else if (!docSnap.data().registrado) {
         navigate("/registro", { state: { nombre: user.displayName || user.email } });
+      } else {
+        navigate("/servicios");
       }
     }
 
