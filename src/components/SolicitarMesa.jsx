@@ -39,7 +39,7 @@ function SolicitarMesa() {
       <h1>Solicitud para mesa de examen</h1>
 
       <div className='fondo' style={{ padding: 20 }}>
-        <div style={{ padding: 20, border: '3px solid lightgray', borderRadius: 5, color: 'gray', display: 'inline-block', minWidth: 400 }}>
+        <div className='contenedor-mesa 'style={{ padding: 20, color: 'gray', display: 'inline-block', minWidth: 400 }}>
           
           <form className='solicitarMesa' onSubmit={handleSubmit}>
 
