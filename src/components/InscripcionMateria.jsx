@@ -15,12 +15,18 @@ function InscripcionMateria() {
  
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Datos de inscripción enviados...');
-        
-   
-        navigate('/InscriptoCorrectamente'); 
-    };
 
+        setSuccess(false);
+        setLoading(true);
+
+        setTimeout(() => {
+        setLoading(false);
+        setSuccess(true); 
+        e.target.reset();
+
+        setTimeout(() => navigate('/InscriptoCorrectamente'), 1000);
+        }, 2000);
+    };
 
     const handleVolver = () => {
         navigate(-1);
