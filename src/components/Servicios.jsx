@@ -6,7 +6,13 @@ import { useEffect } from "react";
 
   useEffect(() => {
     const verificarRegistro = async () => {
-     const user = auth.currentUser; 
+    const user = auth.currentUser; 
+    
+    if (!user){
+      navigate('/registro');
+      return;
+    }  
+
     }
   })
 
