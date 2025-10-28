@@ -3,13 +3,11 @@ import { signInWithPopup,signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc, setDoc} from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useUser } from '../context/UserContext';
 import "./Login.css";
 
 
 
 function Login() {
-  const { login } = useUser();
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
