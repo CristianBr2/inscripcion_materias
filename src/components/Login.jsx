@@ -14,16 +14,12 @@ function Login() {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  const handleGoogleLogin = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        console.log("Usuario autenticado (Google):", result.user);
-        localStorage.setItem("autenticado", "true");
-        navigate("/registro", { state: { nombre: result.user.displayName } });
-      })
-      .catch((error) => {
-        console.error("Error al iniciar sesión con Google:", error);
-      });
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Usuario autenticado con Google: ",user);
+    }
   };
 
   const handleRegularLogin = (e) => {
