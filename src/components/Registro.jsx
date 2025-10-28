@@ -57,6 +57,12 @@ function Registro() {
 
     try {
       
+      if (password && password.length>=8){
+        const credential = EmailAuthProvider.credential(user.email, password);
+        await user.linkWithCredential(credential);
+        console.log("Contraseña vinculada")
+      }
+
       const docRef = doc(db, "Usuario_Nuevo", user.uid);
       await setDoc(docRef, {
         uid:user.uid,
