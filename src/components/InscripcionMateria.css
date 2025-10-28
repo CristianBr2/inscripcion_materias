@@ -25,14 +25,15 @@
 }
 
 .fondo-incripcion{
-    margin-top: 0;
-    width: 90%;
     position: relative;
     z-index: 2;
-    width: 400px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 400px;
+    padding: 20px;
+    color:grey;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(3, 52, 84, 0.519);
+    overflow-y: auto; 
 }
 
 h1{
@@ -85,3 +86,4 @@ button:hover {
 .inscripcion-info-text{
     margin-top: 2rem;
 }
+
