@@ -57,11 +57,12 @@ function Login() {
       await signInWithEmailAndPassword(auth, username, password);
       const user=auth.currentUser;
       console.log("usuario autenticado (Email/Pasword):", user.email);
+    
+      const docRef = doc(db, "Usuario_Nuevo", user.uid);
+      const docSnap = await getDoc(docRef);
     }
 
-    const userFound = VALID_USERS.find(
-      (user) => user.username === username && user.password === password
-    );
+    
 
     if (userFound) {
      
