@@ -10,6 +10,8 @@ function InscripcionMateria() {
     const [materia, setMateria] = useState('');
     const [dni, setDni] = useState('');
     const [curso, setCurso] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
  
     const handleSubmit = (e) => {
         e.preventDefault();
