@@ -20,6 +20,14 @@ function Servicios() {
     const docRef = doc(db, "Usuario_Nuevo", user.uid);
     const docSnap = await getDoc(docRef);
 
+    if (!docSnap.exists() || !docSnap.data().registrado) {
+        console.log("Usuario sin registro se redirigi a /registro");
+        navigate("/registro");
+      } else {
+        console.log("usuario ya registrado");
+      }
+    };
+
     }
   })
 
