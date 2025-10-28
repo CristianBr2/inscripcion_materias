@@ -38,7 +38,7 @@ function Login() {
     }
   };
 
-  const handleRegularLogin = (e) => {
+  const handleRegularLogin = async (e) => {
     e.preventDefault();
     setError("");
     setSuccessMessage("");
@@ -68,32 +68,10 @@ function Login() {
         navigate("/registro", { state: { nombre: user.displayName || user.email } });
       } else {
         navigate("/servicios");
-      } catch (err) {
-      console.error(err);
-      setError("Usuario o contraseña incorrectos.");
-    }
-    }
-
-    
-
-    if (userFound) {
-     
-      console.log("Usuario autenticado (Formulario):", userFound.username);
-      localStorage.setItem("autenticado", "true");
-      
-  
-      setError(""); 
-      setSuccessMessage("Se ha iniciado sesión correctamente."); 
-      
-      setTimeout(() => {
-        setUsername("");
-        setPassword("");
-        setSuccessMessage(""); 
-        navigate("/registro", { state: { nombre: userFound.displayName } });
-      }, 1500); 
-      
-    } else {
-      setError("Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.");
+      } 
+    } catch (err) {
+        console.error(err);
+        setError("Usuario o contraseña incorrectos.");
     }
   };
 
