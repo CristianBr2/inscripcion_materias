@@ -78,6 +78,8 @@ button:hover {
 
 .form-submit{
     margin-top: 2vh;
+    display: flex;
+    justify-content: center;
 }
 
 .inscripcion-info-text{
