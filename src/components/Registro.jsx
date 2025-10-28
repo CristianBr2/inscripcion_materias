@@ -83,6 +83,7 @@ function Registro() {
       setDni('');
       setTelefono('');
       setMaterias('');
+      setPassword('');
 
       alert("Usuario nuevo agregado correctamente ✅");
 
