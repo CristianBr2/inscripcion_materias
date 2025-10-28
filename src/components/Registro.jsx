@@ -180,7 +180,8 @@ function Registro() {
   </Typography>
 
   <Box
-    component="form"onSubmit={handleSubmit}
+    component="form"
+    onSubmit={handleSubmit}
     sx={{
       display: 'flex',
       flexDirection: 'column',
