@@ -28,8 +28,8 @@ function Servicios() {
       }
     };
 
-    }
-  })
+    verificarRegistro();
+    },[navigate]);
 
   return (
     <div className="servicios-container">
