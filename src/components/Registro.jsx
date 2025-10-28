@@ -53,7 +53,7 @@ function Registro() {
         dni,
         curso,
         telefono,
-        materias,
+        materias:materiasNum,
       });
 
       console.log("Usuario nuevo, agregado con ID:", docRef.id);
