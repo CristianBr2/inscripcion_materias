@@ -13,7 +13,7 @@ function Servicios() {
     const user = auth.currentUser; 
     
     if (!user){
-      navigate('/registro');
+      navigate('/login');
       return;
     }  
 
