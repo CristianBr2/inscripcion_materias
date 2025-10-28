@@ -6,10 +6,6 @@ import { useUser } from '../context/UserContext';
 import "./Login.css";
 
 
-const VALID_USERS = [
-  { username: "user1", password: "password123", displayName: "Usuario Uno" },
-  { username: "admin", password: "securepassword", displayName: "Administrador" },
-];
 
 function Login() {
   const { login } = useUser();
