@@ -25,6 +25,10 @@ function Login() {
 
       if (!docSnap.exists()){
         await setDoc(docRef, {uid: user.uid, nombre: user.displayName, registrado: false});
+        console.log("Registro base creado en firebase para el usuario nuevo");
+        navigate("/registro", {state: {nombre: user.displayName} });
+      } else if (!docSnap.data().registrado){
+        navigate("/registro", {state: { nombre: user.displayName} });
       }
     }
   };
