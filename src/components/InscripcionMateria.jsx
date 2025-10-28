@@ -28,12 +28,14 @@ function InscripcionMateria() {
     ];
 
     return (
+        <>
         <div className="inscripcion-materia-container">
             
             <h1 className="inscripcion-materia-title">Inscripción a materia</h1>
             
             <div className="inscripcion-form-box">
-                <form onSubmit={handleSubmit}>
+                <div className='fondo-incripcion'> 
+                <form className='form-inscripcion' onSubmit={handleSubmit}>
                     
                   
                     <div className="form-row">
@@ -70,20 +72,24 @@ function InscripcionMateria() {
                         </div>
                     </div>
 
-                    <div className="form-submit">
+                   <div className="form-submit">
                         <button type="submit" className="btn-enviar">Enviar</button>
                     </div>
 
                 </form>
+                 </div>
             </div>
 
             <p className="inscripcion-info-text">
                 Recuerde que los programas están en su respectiva sección.
             </p>
-          
-            <button onClick={handleVolver} className="btn-volver">Volver</button>
+                                
+            <div className="btn-volver">
+            <button onClick={handleVolver} >Volver</button>
+            </div>
             
         </div>
+        </>
     );
 }
 
