@@ -48,12 +48,14 @@ function Registro() {
     try {
       
       const docRef = await addDoc(collection(db, "Usuario_Nuevo"), {
+        uid:user.uid,
         nombre,
         apellido,
         dni,
         curso,
         telefono,
         materias:materiasNum,
+        registrado:true,
       });
 
       console.log("Usuario nuevo, agregado con ID:", docRef.id);
