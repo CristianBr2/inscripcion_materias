@@ -24,6 +24,9 @@ function PrivateRoute({ children, requiredRole }) {
 
     return () => unsubscribe();
   }, []);
+
+  
+  if (loading) return <p>Cargando...</p>;
 }
 
 export default RutaPrivada;
