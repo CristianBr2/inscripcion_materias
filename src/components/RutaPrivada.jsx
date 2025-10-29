@@ -31,6 +31,8 @@ function PrivateRoute({ children, requiredRole }) {
   if (requiredRole && role !== requiredRole) {
     return <Navigate to="/no-autorizado" replace />; 
   }
+
+  return children;
 }
 
 export default RutaPrivada;
