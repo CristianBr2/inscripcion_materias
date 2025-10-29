@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import { getUserRole } from "../utils/getUserRole";
 
-function PrivateRoute({ children, requiredRole }) {
+function RutaPrivada({ children, requiredRole }) {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   const [role, setRole] = useState(null);
