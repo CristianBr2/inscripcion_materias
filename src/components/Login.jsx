@@ -76,6 +76,20 @@ function Login() {
     }
   };
 
+  const handleForgotPassword = async () => {
+    const email = prompt("Ingresa tu email para recibir el link de reseteo:");
+
+    if (!email) return alert("Debes ingresar un email.");
+
+    try {
+      await sendPasswordResetEmail(auth, email);
+      alert("Se envió un correo para restablecer tu contraseña");
+    } catch (error) {
+      console.error(error);
+      alert("Error al enviar el correo. Revisa que el email sea correcto.");
+    }
+  };
+
   return (
     <div className="login-container">
       <div className="Mayor">
