@@ -31,6 +31,13 @@ function MesaExamen(){
     };
     fetchData();
   }, []);
+
+  //eliminar mesa solo el admi puede
+  const handleDelete = async (id) => {
+    if (role !== "admin") return;
+    await deleteDoc(doc(db, "mesa_examen", id));
+    setMesas(prev => prev.filter(m => m.id !== id));
+  };
 } 
 
   return (
