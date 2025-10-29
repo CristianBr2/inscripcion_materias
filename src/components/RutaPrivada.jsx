@@ -34,7 +34,7 @@ function RutaPrivada({ children, requiredRole }) {
     return <Navigate to="/no-autorizado" replace />;
   }
 
-  return children;
+  return children ? React.cloneElement(children, {role}) : null;
 }
 
 export default RutaPrivada;
