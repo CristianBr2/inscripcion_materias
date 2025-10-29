@@ -3,6 +3,7 @@ import "./Horario.css";
 import { useNavigate } from "react-router-dom";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable"; // ✅ Import correcto
+import UserMenu from "./UserMenu";
 
 function Horario() {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ function Horario() {
 
   return (
     <div className="horario-container">
+      <UserMenu />
       <div className="wave-bg"></div>
 
       <div className="horario-content">
