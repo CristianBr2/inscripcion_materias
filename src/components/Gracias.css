@@ -99,3 +99,15 @@
     display: flex;
     flex-direction: column;
 }
+
+.dropdown-content .btn-menu {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: #38a3dd;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
