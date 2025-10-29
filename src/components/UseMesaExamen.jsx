@@ -66,6 +66,12 @@ function MesaExamen(){
               <td>{mesa.nombre_materia}</td>
               <td>{mesa.fecha}</td>
               <td>{mesa.hora}</td>
+              {role === "admin" && (
+                <td>
+                   <button onClick={() => handleEdit(mesa.id)}>Editar</button>
+                   <button onClick={() => handleDelete(mesa.id)}>Eliminar</button>
+                </td>
+              )}
             </tr>
           ))}
         </tbody>
