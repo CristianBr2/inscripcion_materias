@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { collection, query, where, orderBy, getDocs, doc, onSnapshot } from "firebase/firestore";
 import { db } from "../firebaseConfig"; 
+import { getUserRole } from "../utils/getUserRole";
+import { auth } from "../firebaseConfig";
 
 //----------SUSCRIBIRSE A UN DOC------------
 
