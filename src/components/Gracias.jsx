@@ -46,17 +46,15 @@ function Gracias() {
             </div>
 
             <div className="dropdown-menu-container">
-                <button onClick={toggleMenu} className="dropdown-toggle-btn">
-                    Opciones
-                </button>
+                <span className="user-icon" onClick={toggleMenu}>👤</span>
                 {isMenuOpen && (
                     <div className="dropdown-content">
-                        <button onClick={handleLogout} className="btn-cerrar-sesion">
-                            Cerrar Sesión
-                        </button>
+                        <button onClick={handleInicio} className="btn-menu">Inicio</button>
+                        <button onClick={handleLogout} className="btn-menu">Cerrar Sesión</button>
                     </div>
                 )}
             </div>
+
         </div>
     );
 }
