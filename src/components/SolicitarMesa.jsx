@@ -18,13 +18,16 @@ function SolicitarMesa() {
     setSuccess(false);
     setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false);
-      setSuccess(true); 
-      e.target.reset();
-
-      setTimeout(() => navigate('/servicios'), 1000);
-    }, 2000);
+    const formData = {
+    nombre: e.target.nombre.value,
+    apellido: e.target.apellido.value,
+    dni: e.target.dni.value,
+    curso: e.target.curso.value,
+    materia: e.target.materia.value,
+    anio: e.target.anio.value,
+    fecha: e.target.fecha.value,
+    usuarioId: auth.currentUser?.uid || null, // opcional: para relacionar con usuario
+    timestamp: new Date()
   };
 
   const handleVolver = () => navigate(-1);
