@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { collection, query, where, orderBy, getDocs, doc, onSnapshot } from "firebase/firestore";
-import { db } from "../firebaseConfig"; 
+import { db, auth } from "../firebaseConfig"; 
 import { getUserRole } from "../utils/getUserRole";
-import { auth } from "../firebaseConfig";
+
 
 function MesaExamen(){
   const [mesas,setMesas] = useState([]);
@@ -79,6 +79,6 @@ function MesaExamen(){
     </div>
 </>
   );
-}
+
 
 export default MesaExamen;
