@@ -117,6 +117,17 @@ function Login() {
             {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
             
             <input type="submit" value="Iniciar" />
+
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); 
+                handleForgotPassword();
+              }}
+            >
+              Olvidé mi contraseña
+            </a>
+
           </form>
         </div>
         <div className="google">
