@@ -3,6 +3,7 @@ import './Programa.css';
 import { useNavigate } from "react-router-dom"; 
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
+import UserMenu from "./UserMenu";
 
 function Programa() {
     const navigate = useNavigate();
@@ -102,7 +103,7 @@ function Programa() {
 
     return (
         <div className="programa-container">
-            
+            <UserMenu />
             <div className="programa-content">
                 
                
