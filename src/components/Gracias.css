@@ -76,3 +76,13 @@
     right: 20px; 
     z-index: 100; 
 }
+
+.user-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background-color: #b3acac70;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
