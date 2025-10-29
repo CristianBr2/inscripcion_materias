@@ -4,17 +4,11 @@ import { Navigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import { getUserRole } from "../utils/getUserRole";
 
-function RutaPrivada({ children }) { 
-  const { user, loading } = useUser(); 
-  const estaAutenticado = localStorage.getItem("autenticado") === "true";
-  
-  console.log("¿Autenticado?", estaAutenticado);
-  
-  if (estaAutenticado) {
-    return children;
-  } else {
-    return <Navigate to="/login" />; 
-  }
+function PrivateRoute({ children, requiredRole }) {
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
+  const [role, setRole] = useState(null);
+
 }
 
 export default RutaPrivada;
