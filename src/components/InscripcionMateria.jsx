@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './InscripcionMateria.css';
+import UserMenu from "./UserMenu";
 
 function InscripcionMateria() {
 
@@ -45,7 +46,7 @@ function InscripcionMateria() {
         <div className="inscripcion-materia-container">
             
             <h1 className="inscripcion-materia-title">Inscripción a materia</h1>
-            
+            <UserMenu />
             <div className="inscripcion-form-box">
                 <div className='fondo-incripcion'> 
                 <form className='form-inscripcion' onSubmit={handleSubmit}>

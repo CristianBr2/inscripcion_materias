@@ -136,6 +136,7 @@
     /* POSICIÓN CLAVE: ANCLAJE ABAJO Y A LA DERECHA DE LA VENTANA */
     position: fixed; 
     bottom: 20px; 
+    left: 20px;
     right: 20px;  
     
     display: flex;
