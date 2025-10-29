@@ -31,8 +31,10 @@ function Registro() {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
+      console.log("handleSubmit ejecutado");
 
     const user = auth.currentUser;
+    console.log("Usuario actual:", user);
 
     if (!user) {
       alert("Debes iniciar sesión primero");
