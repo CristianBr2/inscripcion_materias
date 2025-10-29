@@ -16,6 +16,8 @@ function InscripcionMateria() {
     const [curso, setCurso] = useState('');
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+
+    const handleVolver = () => navigate(-1);
  
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -44,7 +46,6 @@ function InscripcionMateria() {
         setLoading(false);
         alert("Hubo un error al enviar la solicitud. Intente de nuevo.");
     }
-    const handleVolver = () => navigate(-1);
 };
 
     const opcionesMateria = [
