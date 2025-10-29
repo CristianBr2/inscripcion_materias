@@ -9,6 +9,21 @@ function PrivateRoute({ children, requiredRole }) {
   const [user, setUser] = useState(null);
   const [role, setRole] = useState(null);
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        setUser(user);
+        const rol = await getUserRole(user.uid);
+        setRole(rol);
+      } else {
+        setUser(null);
+        setRole(null);
+      }
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
 }
 
 export default RutaPrivada;
