@@ -57,6 +57,7 @@ function MesaExamen(){
             <th>Materia</th>
             <th>Fecha</th>
             <th>Hora</th>
+            {role === "admin" && <th>Acciones</th>}
           </tr>
         </thead>
         <tbody>
