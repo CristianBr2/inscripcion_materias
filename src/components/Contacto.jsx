@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Contacto.css';
 import UserMenu from "./UserMenu";
+import { collection, addDoc } from "firebase/firestore";
+import { auth, db } from "../firebaseConfig";
 
 function Contacto() {
 
