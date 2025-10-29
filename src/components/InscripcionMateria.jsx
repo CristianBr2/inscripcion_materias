@@ -23,13 +23,14 @@ function InscripcionMateria() {
         setSuccess(false);
         setLoading(true);
 
-        setTimeout(() => {
-        setLoading(false);
-        setSuccess(true); 
-        e.target.reset();
-
-        setTimeout(() => navigate('/InscriptoCorrectamente'), 1000);
-        }, 2000);
+        const formData = {
+        nombre: e.target.nombre.value,
+        apellido: e.target.apellido.value,
+        materia: e.target.materia.value,
+        dni: e.target.dni.value,
+        curso: e.target.curso.value,
+        usuarioId: auth.currentUser?.uid || null,
+        timestamp: new Date()
     };
 
     const handleVolver = () => {
