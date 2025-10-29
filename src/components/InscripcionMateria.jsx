@@ -45,9 +45,8 @@ function InscripcionMateria() {
         setLoading(false);
         alert("Hubo un error al enviar la solicitud. Intente de nuevo.");
     }
-    const handleVolver = () => {
-        navigate(-1);
-    };
+    const handleVolver = () => navigate(-1);
+};
 
     const opcionesMateria = [
         "Seleccione materia",
