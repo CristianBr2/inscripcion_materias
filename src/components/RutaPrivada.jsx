@@ -28,7 +28,9 @@ function RutaPrivada({ children, requiredRole }) {
   
   if (loading) return <p>Cargando...</p>;
 
-   if (requiredRole && role !== requiredRole && role !== "admin") {
+  if (!user) return <Navigate to="/login" replace />;
+
+  if (requiredRole && role !== requiredRole && role !== "admin") {
     return <Navigate to="/no-autorizado" replace />;
   }
 
