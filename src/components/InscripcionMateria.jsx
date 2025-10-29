@@ -33,8 +33,7 @@ function InscripcionMateria() {
         timestamp: new Date()
     };
     try{
-        await addDoc(collection(db, "Inscricon_Materia"), formData);
-      
+        await addDoc(collection(db, "Inscripcon_Materia"), formData);
         setLoading(false);
         setSuccess(true);
         e.target.reset();
