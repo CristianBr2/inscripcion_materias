@@ -3,7 +3,7 @@ import './Servicios.css';
 import { auth, db } from "../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect } from "react";
-
+import UserMenu from "./UserMenu";
 
 function Servicios() {
   const navigate = useNavigate();
@@ -33,6 +33,7 @@ function Servicios() {
 
   return (
     <div className="servicios-container">
+      <UserMenu />
       <div className="servicios-content">
         <h1>¿Qué desea hoy?</h1>
 
@@ -45,6 +46,7 @@ function Servicios() {
         </div>
       </div>
     </div>
+   
   );
 }
 
