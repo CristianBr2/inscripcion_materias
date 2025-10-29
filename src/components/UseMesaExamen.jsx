@@ -7,6 +7,16 @@ import { auth } from "../firebaseConfig";
 function MesaExamen(){
   const [mesas,setMesas] = useState([]);
   const [role,setRole]=useState("usuario");
+
+  useEffect(() => {
+    const fetchRole = async () => {
+      if (auth.currentUser) {
+        const r = await getUserRole(auth.currentUser.uid);
+        setRole(r);
+      }
+    };
+    fetchRole();
+  }, []);
 } 
 
   return (
