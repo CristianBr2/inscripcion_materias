@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Contacto.css';
+import UserMenu from "./UserMenu";
 
 function Contacto() {
 
@@ -34,6 +35,7 @@ function Contacto() {
         <>
         <div className="contacto-container">
             <h1>Contacto</h1>
+            <UserMenu />
             <div className="contacto-box"> 
                 <div className='fondo-contacto'>
                 <form className='formulario-contacto' onSubmit={handleSubmit}>
