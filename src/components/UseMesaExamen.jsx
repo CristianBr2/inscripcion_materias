@@ -17,6 +17,20 @@ function MesaExamen(){
     };
     fetchRole();
   }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const q = query(
+        collection(db, "mesa_examen"),
+        where("activo", "==", true),
+        orderBy("nombre_materia", "asc")
+      );
+      const snap = await getDocs(q);
+      const data = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setMesas(data);
+    };
+    fetchData();
+  }, []);
 } 
 
   return (
