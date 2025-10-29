@@ -13,7 +13,7 @@ function Contacto() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
-
+    const handleVolver = () => navigate(-1);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
