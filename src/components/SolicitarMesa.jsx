@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom"; 
 import './SolicitarMesa.css';
+import UserMenu from "./UserMenu";
 
 function SolicitarMesa() { 
 
@@ -37,7 +38,7 @@ function SolicitarMesa() {
   return (
     <div className='contenedorMayor'>
       <h1>Solicitud para mesa de examen</h1>
-
+      <UserMenu />
       <div className='fondo' style={{ padding: 20 }}>
         <div className='contenedor-mesa 'style={{ padding: 20, color: 'gray', display: 'inline-block', minWidth: 400 }}>
           
