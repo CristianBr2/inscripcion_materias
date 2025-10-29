@@ -32,7 +32,19 @@ function InscripcionMateria() {
         usuarioId: auth.currentUser?.uid || null,
         timestamp: new Date()
     };
-
+    try{
+        await addDoc(collection(db, "Inscricon_Materia"), formData);
+      
+        setLoading(false);
+        setSuccess(true);
+        e.target.reset();
+      
+        setTimeout(() => navigate('/servicios'), 1000);
+    } catch (error) {
+        console.error("Error al enviar la solicitud:", error);
+        setLoading(false);
+        alert("Hubo un error al enviar la solicitud. Intente de nuevo.");
+    }
     const handleVolver = () => {
         navigate(-1);
     };
