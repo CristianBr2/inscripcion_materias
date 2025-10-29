@@ -45,7 +45,6 @@ function MesaExamen(){
     await updateDoc(doc(db, "mesa_examen", id), { activo: false });
     setMesas(prev => prev.map(m => m.id === id ? { ...m, activo: false } : m));
   };
-} 
 
   return (
 <>
@@ -79,6 +78,5 @@ function MesaExamen(){
     </div>
 </>
   );
-
-
+}
 export default MesaExamen;
