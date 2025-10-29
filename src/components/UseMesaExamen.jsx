@@ -4,30 +4,10 @@ import { db } from "../firebaseConfig";
 import { getUserRole } from "../utils/getUserRole";
 import { auth } from "../firebaseConfig";
 
-//----------SUSCRIBIRSE A UN DOC------------
-
-function listenById(id, cb, errCb) {
-  const ref = doc(db, "mesa-examen", id);
-  return onSnapshot(ref, (d) => {
-    cb(d.exist() ? { id: d.id, ...d.data() } : null);
-  }, errCb);
-}
-
-
-function MesaExamen() {
-  const [mesas, setMesas] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-    const col = collection(db, "mesa_examen");
-    const q = query(collection(db, "mesa_examen"), where("activo", "==", true),orderBy("nombre_materia", "asc"))
-    const snap = await getDocs(q);
-    const data = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setMesas(data);
-    }
-
-    fetchData();
-  }, []);
+function MesaExamen(){
+  const [mesas,setMesas] = useState([]);
+  const [role,setRole]=useState("usuario");
+} 
 
   return (
 <>
