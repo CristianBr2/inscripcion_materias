@@ -38,6 +38,13 @@ function MesaExamen(){
     await deleteDoc(doc(db, "mesa_examen", id));
     setMesas(prev => prev.filter(m => m.id !== id));
   };
+
+  //marcar las mesas como inactiva por si se estan editando
+  const handleEdit = async (id) => {
+    if (role !== "admin") return;
+    await updateDoc(doc(db, "mesa_examen", id), { activo: false });
+    setMesas(prev => prev.map(m => m.id === id ? { ...m, activo: false } : m));
+  };
 } 
 
   return (
