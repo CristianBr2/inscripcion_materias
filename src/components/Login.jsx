@@ -9,7 +9,7 @@ import "./Login.css";
 
 function Login() {
   const navigate = useNavigate();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
@@ -43,8 +43,8 @@ function Login() {
     setError("");
     setSuccessMessage("");
 
-    if (username.length < 5) {
-        setError("El nombre de usuario debe tener más de 4 caracteres.");
+    if (email.length < 5) {
+        setError("Revise su correo, antes de enviar");
         return;
     }
 
@@ -54,7 +54,8 @@ function Login() {
     }
     
     try{
-      await signInWithEmailAndPassword(auth, username, password);
+      console.log("Email:", email, "Password:", password);
+      await signInWithEmailAndPassword(auth, email, password);
       const user=auth.currentUser;
       console.log("usuario autenticado (Email/Pasword):", user.email);
     
@@ -81,11 +82,11 @@ function Login() {
         <div className="Medio">
           <h2>Iniciar sesión</h2>
           <form onSubmit={handleRegularLogin}>
-            <label>Usuario:</label>
+            <label>Email:</label>
             <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
 
