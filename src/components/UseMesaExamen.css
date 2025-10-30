@@ -1,0 +1,26 @@
+body{
+    background: linear-gradient(to right, #0a69ad, #4a619a);
+}
+
+
+.mesaTable {
+  margin: 20px auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.mesaTable th,
+.mesaTable td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color:white;
+  font-size: 1.30rem;
+}
+
+.addMesaForm {
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
