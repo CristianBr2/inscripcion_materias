@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { Navigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
-import { getUserRole } from "../utils/getUserRole";
+import { getRolUsuario } from "../utils/getRolUsuario";
+import React from "react";
+
 
 function RutaPrivada({ children, requiredRole }) {
   const [loading, setLoading] = useState(true);
@@ -13,7 +15,7 @@ function RutaPrivada({ children, requiredRole }) {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         setUser(user);
-        const rol = await getUserRole(user.uid);
+        const rol = await getRolUsuario(user.uid);
         setRole(rol);
       } else {
         setUser(null);
@@ -28,7 +30,7 @@ function RutaPrivada({ children, requiredRole }) {
   
   if (loading) return <p>Cargando...</p>;
 
-  // if (!user) return <Navigate to="/login" replace />;
+  if (!user) return <Navigate to="/login" replace />;
 
   if (requiredRole && role !== requiredRole && role !== "admin") {
     return <Navigate to="/no-autorizado" replace />;
