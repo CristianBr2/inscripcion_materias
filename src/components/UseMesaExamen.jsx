@@ -3,6 +3,7 @@ import { collection, query, where, orderBy, getDocs, doc, deleteDoc, updateDoc, 
 import { db, auth } from "../firebaseConfig"; 
 import { getRolUsuario } from "../utils/getRolUsuario";
 import UserMenu from "./UserMenu";
+import "./UseMesaExamen.css";
 
 
 function MesaExamen(){
@@ -93,7 +94,7 @@ function MesaExamen(){
 
   return (
 <>
-    <div>
+    <div className="addMesaForm">
     <h2 style={{ textAlign: "center", marginTop: "20px", color:"black"}}>Mesas de Examen Activas</h2>
     <UserMenu />
      {role === "admin" && (
@@ -121,7 +122,7 @@ function MesaExamen(){
         </div>
       )} 
     
-    <table border="1" style={{ margin: "0 auto", marginTop: "20px" }}>
+    <table className="mesaTable" border="1" style={{ margin: "0 auto", marginTop: "20px" }}>
         <thead>
           <tr>
             <th>Materia</th>
