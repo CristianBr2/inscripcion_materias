@@ -95,11 +95,11 @@ function MesaExamen(){
   return (
 <>
     <div className="addMesaForm">
-    <h2 style={{ textAlign: "center", marginTop: "20px", color:"black"}}>Mesas de Examen Activas</h2>
+    <h2 style={{ fontSize:"5vh", textAlign: "center", marginTop: "40px", color:"white"}}>Mesas de Examen Activas</h2>
     <UserMenu />
      {role === "admin" && (
         <div style={{ margin: "20px auto", width: "80%" }}>
-          <h3>Añadir nueva mesa</h3>
+          <h3 style={{ fontSize:"3vh",textAlign: "center", marginTop: "40px", color:"white", marginBottom:"20px"}}>Añadir nueva mesa</h3>
           <input
             name="nombre_materia"
             value={newMesa.nombre_materia}
@@ -122,7 +122,7 @@ function MesaExamen(){
         </div>
       )} 
     
-    <table className="mesaTable" border="1" style={{ margin: "0 auto", marginTop: "20px" }}>
+    <table className="mesaTable" border="1" style={{ margin: "0 auto", marginTop: "90px" }}>
         <thead>
           <tr>
             <th>Materia</th>
