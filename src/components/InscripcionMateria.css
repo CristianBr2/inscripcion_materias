@@ -87,3 +87,10 @@ button:hover {
     margin-top: 2rem;
 }
 
+input{
+  color: white;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
