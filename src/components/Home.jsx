@@ -21,13 +21,13 @@ function Home() {
       </div>
       <h2 className="school-name">E.P.E.T N° 20 - NEUQUÉN CAPITAL</h2>
       <div className="carousel-container">
-        <button className="arrow left-arrow">&lt;</button>
+        
         <img
           src="/img/img.png"
           alt="Epet"
           className="school-image"
         />
-        <button className="arrow right-arrow">&gt;</button>
+        
       </div>
       <h2 className="section-title">Nuestros servicios</h2>
       <p className="service-intro">Esto es un bloque en el cual nos fundamentamos en la ayuda a nuestros alumnos...</p>
