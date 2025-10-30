@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { collection, query, where, orderBy, getDocs, doc, deleteDoc, updateDoc, addDoc  } from "firebase/firestore";
 import { db, auth } from "../firebaseConfig"; 
 import { getRolUsuario } from "../utils/getRolUsuario";
+import UserMenu from "./UserMenu";
 
 
 function MesaExamen(){
@@ -94,7 +95,7 @@ function MesaExamen(){
 <>
     <div>
     <h2 style={{ textAlign: "center", marginTop: "20px", color:"black"}}>Mesas de Examen Activas</h2>
-
+    <UserMenu />
      {role === "admin" && (
         <div style={{ margin: "20px auto", width: "80%" }}>
           <h3>Añadir nueva mesa</h3>
