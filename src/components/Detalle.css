@@ -1,0 +1,16 @@
+.DetalleTabla{
+    border-color: white;
+    width: 60%;
+    height: 10vh;
+}
+
+th{
+    font-size: 5vh;
+    color:rgb(0, 217, 255);
+}
+
+td{
+    font-size: 3vh ;
+    color: white;
+    padding-left: 2vh;
+}
