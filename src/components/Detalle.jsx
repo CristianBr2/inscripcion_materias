@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import './Detalle.css';
+import UserMenu from "./UserMenu";
 
 const productos = [
     {id: 1, nombremateria: 'Matemáticas', profesor: 'Juan Castro', curso:'4° 2°', horario: '19:30 hs a 20:50 hs'},
@@ -18,8 +20,8 @@ function Detalle() {
 
     return(
         
-
         <table className="DetalleTabla" border="1" style={{ margin: "0 auto", marginTop: "90px" }}>
+            <UserMenu />
             <thead>
                 <tr>
                     <th>Nombre Materia</th>
