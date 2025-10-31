@@ -14,31 +14,33 @@ function Detalle() {
     const {id} = useParams();
     const producto = productos.find((p) => p.id === Number(id)); 
 
+    
     if (!producto){
         return <h2>No se encontro el producto</h2>;
     }
 
     return(
-        
-        <table className="DetalleTabla" border="1" style={{ margin: "0 auto", marginTop: "90px" }}>
-            <UserMenu />
-            <thead>
-                <tr>
-                    <th>Nombre Materia</th>
-                    <th>Profesor</th>
-                    <th>Curso</th>
-                    <th>Horario</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{producto.nombremateria}</td>
-                    <td>{producto.profesor}</td>
-                    <td>{producto.curso}</td>
-                    <td>{producto.horario}</td>
-                </tr>
-            </tbody>
-        </table> 
+        <div style={{ marginTop: "90px" }}>
+            <table className="DetalleTabla" border="1" style={{ margin: "0 auto", marginTop: "90px" }}>
+                <UserMenu />
+                <thead>
+                    <tr>
+                        <th>Nombre Materia</th>
+                        <th>Profesor</th>
+                        <th>Curso</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{producto.nombremateria}</td>
+                        <td>{producto.profesor}</td>
+                        <td>{producto.curso}</td>
+                        <td>{producto.horario}</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
     );
 }
 
