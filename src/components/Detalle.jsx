@@ -15,10 +15,40 @@ function Detalle() {
     const producto = productos.find((p) => p.id === Number(id)); 
 
     
-    if (!producto){
-        return <h2>No se encontro el producto</h2>;
+    if (!id){
+    
+        return (
+         <div style={{ marginTop: "90px" }}>
+            <table className="DetalleTabla" border="1" style={{ margin: "0 auto", marginTop: "90px" }}>
+                <UserMenu />
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre Materia</th>
+                        <th>Profesor</th>
+                        <th>Curso</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                 <tbody>
+                        {productos.map((p) => (
+                        <tr key={p.id}>
+                        <td>{p.id}</td>
+                        <td>{p.nombremateria}</td>
+                        <td>{p.profesor}</td>
+                        <td>{p.curso}</td>
+                        <td>{p.horario}</td>
+                        </tr>
+                    ))}
+                 </tbody>
+            </table> 
+        </div>
+        );
     }
 
+    if(!producto){
+        return <h2>No se encontró el producto</h2>;
+    }
     return(
         <div style={{ marginTop: "90px" }}>
             <table className="DetalleTabla" border="1" style={{ margin: "0 auto", marginTop: "90px" }}>
