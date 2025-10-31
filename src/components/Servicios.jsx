@@ -42,7 +42,7 @@ function Servicios() {
           <button onClick={()=>navigate("/solicitarmesa")}>Solicitar mesa</button>
           <button onClick={()=>navigate("/Horario")}>Hs profesores</button>
           <button onClick={() => navigate("/Contacto")}>Tengo un problema</button>
-          <button onClick={()=>navigate("/InscripcionMateria")}>Inscribirme a materias</button>
+          <button onClick={()=>navigate("/InscripcionMateria")}>Inscribirme a materias</button> 
           <button onClick={()=>navigate("/mesa-examen")}>Ver mesas</button>
         </div>
       </div>
