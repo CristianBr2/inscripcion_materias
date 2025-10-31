@@ -43,10 +43,14 @@ function App() {
 
           
           <Route path="/mesa-examen" element={<RutaPrivada requiredRole="usuario"><UseMesaExamen /></RutaPrivada>} />
+          <Route path="/producto/:id" element={<RutaPrivada requiredRole="usuario"><Detalle /></RutaPrivada>} />
+          <Route path="/producto" element={<RutaPrivada requiredRole="usuario"><Detalle /></RutaPrivada>} />
+
 
           {/* Rutas para admin */}
           <Route path="/alta-mesa" element={<RutaPrivada requiredRole="admin"><AltaMesaExamen /></RutaPrivada>} />
-          <Route path="/producto/:id" element={<RutaPrivada requiredRole="admin"><Detalle /></RutaPrivada>} />
+          
+
 
         </Routes>
       </BrowserRouter>
