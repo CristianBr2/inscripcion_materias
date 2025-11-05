@@ -105,6 +105,9 @@
     grid-column: 3 / 5;
 }
 
+.servicios-button-grid button:nth-child(7) {
+    grid-column: 4 / 5; 
+}
 
 .servicios-button-grid button:hover {
     filter: brightness(1.1);
