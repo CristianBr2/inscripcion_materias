@@ -15,7 +15,7 @@ function MesaExamen(){
   const [editData, setEditData] = useState({ nombre_materia: "", fecha: "", hora: "" });
   const navigate = useNavigate();
   const handleVolver = () => {
-    navigate(-1); // vuelve a la página anterior
+    navigate(-1); 
 };
 
 
@@ -101,7 +101,7 @@ function MesaExamen(){
   return (
 <>
     <div className="addMesaForm">
-    <h2 style={{ fontSize:"5vh", textAlign: "center", marginTop: "40px", color:"white"}}>Mesas de Examen Activas</h2>
+    <h2 style={{fontFamily:'sans-serif', fontSize:"5vh", textAlign: "center", marginTop: "40px", color:"white"}}>Mesas de Examen Activas</h2>
     <UserMenu />
      {role === "admin" && (
         <div style={{ margin: "20px auto", width: "80%" }}>
@@ -194,8 +194,8 @@ function MesaExamen(){
       </table>
     </div>
     <div className='botonVolver'>
-                    <button onClick={handleVolver} style={{ padding: '8px 15px' }}>Volver</button>
-                 </div>
+        <button onClick={handleVolver} style={{ padding: '8px 15px' }}>Volver</button>
+    </div>
 </>
   );
 }
