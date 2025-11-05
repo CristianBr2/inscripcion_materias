@@ -107,7 +107,7 @@ function Detalle() {
         return (
          <>
              <div>
-             <h2 style={{ fontSize:"5vh", textAlign: "center", marginTop: "40px", color:"white"}}>Materias</h2>
+             <h2 style={{ fontFamily:'sans-serif',fontSize:"5vh", textAlign: "center", marginTop: "40px", color:"white"}}>Materias</h2>
              <UserMenu />
               {role === "admin" && (
                  <div style={{ margin: "20px auto", width: "80%" }}>
