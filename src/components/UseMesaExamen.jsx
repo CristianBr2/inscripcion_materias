@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { collection, query, where, orderBy, getDocs, doc, deleteDoc, updateDoc, addDoc  } from "firebase/firestore";
 import { db, auth } from "../firebaseConfig"; 
@@ -12,6 +13,11 @@ function MesaExamen(){
   const [newMesa, setNewMesa] = useState({ nombre_materia: "", fecha: "", hora: "", activo: true });
   const [editingId, setEditingId] = useState(null);
   const [editData, setEditData] = useState({ nombre_materia: "", fecha: "", hora: "" });
+  const navigate = useNavigate();
+  const handleVolver = () => {
+    navigate(-1); // vuelve a la página anterior
+};
+
 
 
   useEffect(() => {
@@ -187,6 +193,9 @@ function MesaExamen(){
         </tbody>
       </table>
     </div>
+    <div className='botonVolver'>
+                    <button onClick={handleVolver} style={{ padding: '8px 15px' }}>Volver</button>
+                 </div>
 </>
   );
 }
