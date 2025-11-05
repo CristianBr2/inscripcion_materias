@@ -33,7 +33,8 @@ function RegistroExitoso() {
         variant="h1"
         align="center"
         sx={{
-          fontFamily: 'Liberation Serif, serif',
+          fontFamily: 'sans-serif',
+          fontSize:'10vh',
           marginTop: 9,
           marginBottom: 8,
           color: 'black',
@@ -55,7 +56,7 @@ function RegistroExitoso() {
         variant="h3"
         align="center"
         sx={{
-           fontFamily: "'Times New Roman', serif",
+          fontFamily: 'sans-serif',
           marginTop: 9,
           marginBottom: 7,
           color: 'black',
