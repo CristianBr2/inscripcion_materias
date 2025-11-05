@@ -69,15 +69,13 @@
 .servicios-button-grid button:nth-child(1),
 .servicios-button-grid button:nth-child(3) {
     background-color: #49a8f6; 
-    text-decoration: underline;
     font-size: 1.2em;
 }
 
 .servicios-button-grid button:nth-child(2) {
     grid-column: 2 / 4;
     background-color: transparent; 
-    border: 3px solid #49a8f6; 
-    text-decoration: underline;
+    border: 3px solid #49a8f6;
     font-size: 1.2em;
 }
 
@@ -93,7 +91,6 @@
 .servicios-button-grid button:nth-child(5) {
     background-color: #72b0e6; 
     border: none;
-    text-decoration: underline;
     margin-top: 30px;
     font-size: 1.3em;
 }
