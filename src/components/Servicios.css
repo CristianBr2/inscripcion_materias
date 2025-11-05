@@ -1,13 +1,7 @@
-/* Servicios.css - CÓDIGO FINAL CON DISEÑO DE FONDO 'CLIP-PATH' */
-
-/* ------------------------------------ */
-/* Contenedor Principal y Fondo */
-/* ------------------------------------ */
 .servicios-container {
     font-family: Arial, sans-serif; 
-    /* El color de fondo superior (azul claro) */
     background-color: #a7d9ed; 
-    color: white; /* Color del texto para que contraste con el fondo */
+    color: white; 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,7 +12,6 @@
     overflow: hidden;
 }
 
-/* Pseudo-elemento para crear la CURVA/OLA con clip-path (Reemplaza al ::after anterior) */
 .servicios-container::before {
     content: '';
     position: absolute;
@@ -26,16 +19,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #49a8f6; /* El color azul más oscuro de la curva */
+    background-color: #49a8f6; 
     /* **LA CLAVE DEL DISEÑO DE OLA:** */
     clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 80%);
     z-index: 1; 
 }
 
-/* El pseudo-elemento ::after fue eliminado para usar ::before y clip-path. */
-
-
-/* Contenido (h1 y botones) debe estar por encima de la "ola" */
 .servicios-content {
     position: relative;
     z-index: 2;
@@ -46,9 +35,6 @@
     align-items: center;
 }
 
-/* ------------------------------------ */
-/* Título */
-/* ------------------------------------ */
 .servicios-content h1 {
     color: white;
     font-size: 2.5em;
@@ -58,9 +44,6 @@
     text-align: center;
 }
 
-/* ------------------------------------ */
-/* Grid de Botones */
-/* ------------------------------------ */
 .servicios-button-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -70,7 +53,6 @@
     margin-top: 20px;
 }
 
-/* Estilo general de los botones */
 .servicios-button-grid button {
     color: white;
     font-size: 1.1em;
@@ -84,44 +66,31 @@
     border: none;
 }
 
-/* ------------------------------------ */
-/* Posicionamiento y Estilos Específicos */
-/* ------------------------------------ */
-
-/* Estilo para los botones de la FILA SUPERIOR (Ver programa, Solicitar mesa, Hs profesores) */
 .servicios-button-grid button:nth-child(1),
 .servicios-button-grid button:nth-child(3) {
-    /* Color del botón superior: Mismo azul oscuro del fondo inferior #49a8f6 */
     background-color: #49a8f6; 
     text-decoration: underline;
     font-size: 1.2em;
 }
 
-/* Botón "Solicitar mesa" (Top-Center) - Mantiene el fondo pero tiene un borde de color */
 .servicios-button-grid button:nth-child(2) {
     grid-column: 2 / 4;
-    background-color: transparent; /* Sin fondo visible */
-    /* Borde con el color del fondo inferior #49a8f6 */
+    background-color: transparent; 
     border: 3px solid #49a8f6; 
     text-decoration: underline;
     font-size: 1.2em;
 }
 
-/* Posicionamiento: Botón "Ver programa" (Top-Left) */
 .servicios-button-grid button:nth-child(1) {
     grid-column: 1 / 2;
 }
 
-/* Posicionamiento: Botón "Hs profesores" (Top-Right) */
 .servicios-button-grid button:nth-child(3) {
     grid-column: 4 / 5;
 }
 
-
-/* Estilo para los botones de la FILA INFERIOR (Tengo un problema, Inscribirme a materias) */
 .servicios-button-grid button:nth-child(4),
 .servicios-button-grid button:nth-child(5) {
-    /* Color para los botones inferiores: Color intermedio #72b0e6 (Mantenido) */
     background-color: #72b0e6; 
     border: none;
     text-decoration: underline;
@@ -129,17 +98,17 @@
     font-size: 1.3em;
 }
 
-/* Posicionamiento: Botón "Tengo un problema" (Bottom-Left) */
+
 .servicios-button-grid button:nth-child(4) {
     grid-column: 1 / 3;
 }
 
-/* Posicionamiento: Botón "Inscribirme a materias" (Bottom-Right) */
+
 .servicios-button-grid button:nth-child(5) {
     grid-column: 3 / 5;
 }
 
-/* Hover effects */
+
 .servicios-button-grid button:hover {
     filter: brightness(1.1);
     transform: translateY(-2px);
