@@ -47,7 +47,7 @@ function RegistroExitoso() {
           }
         }}
       >
-        🎉 ¡Registro Exitoso! 🎉
+        🎉 ¡Registro Exitoso! 
       </Typography>
 
     
