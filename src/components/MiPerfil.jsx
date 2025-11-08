@@ -109,6 +109,68 @@ function MiPerfil() {
           Tu cuenta está inactiva
         </p>
       )}
+
+      <div className="tablaPerfil">
+        <label>Nombre:</label>
+  <input
+    type="text"
+    name="nombre"
+    value={formData.nombre}
+    onChange={handleChange}
+    placeholder="Ingresa tu nombre"
+  />
+
+  <label>Apellido:</label>
+  <input
+    type="text"
+    name="apellido"
+    value={formData.apellido}
+    onChange={handleChange}
+    placeholder="Ingresa tu apellido"
+  />
+
+  <label>DNI:</label>
+    <input
+      type="text"
+      name="dni"
+      value={formData.dni}
+      onChange={(e) => {
+        const value = e.target.value.replace(/\D/g, '').slice(0, 8);
+        setFormData({ ...formData, dni: value });
+      }}
+      placeholder="Ingresa tu DNI"
+    />
+
+  <label>Correo:</label>
+    <input
+      type="email"
+      name="correo"
+      value={formData.correo}
+      onChange={handleChange}
+      placeholder="Ingresa tu correo"
+    />
+
+  <label>Curso:</label>
+    <input
+      type="text"
+      name="curso"
+      value={formData.curso}
+      onChange={handleChange}
+      placeholder="Ingresa tu curso"
+    />
+
+  <label>Teléfono:</label>
+    <input
+      type="text"
+      name="telefono"
+      value={formData.telefono}
+      onChange={(e) => {
+        const value = e.target.value.replace(/\D/g, '').slice(0, 10);
+        setFormData({ ...formData, telefono: value });
+      }}
+      placeholder="Ingresa tu teléfono"
+    />
+      </div>
     </div>
     </>
   );
