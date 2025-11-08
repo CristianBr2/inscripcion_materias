@@ -83,11 +83,17 @@ function MiPerfil() {
   // cuenta inactiva seria como eliminada
   const handleEliminar = async () => {
     if (!user) return;  
-  try {
-    const ref = doc(db, "alumno", user.uid);
-    await updateDoc(ref, { activo: false });
 
+    try {
+      const ref = doc(db, "alumno", user.uid);
+      await updateDoc(ref, { activo: false });
+
+      alert("Cuenta marcada como inactiva (no eliminada)");
+      await signOut(auth);
+      navigate("/login");
+    }
   }
+
   return (
     <>
     
