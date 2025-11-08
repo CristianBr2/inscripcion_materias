@@ -72,7 +72,13 @@ function MiPerfil() {
       const ref = doc(db, "alumno", user.uid);
       //  setDoc con merge:true para evitar errores si el doc no existe tva
       await setDoc(ref, { ...formData, activo: true }, { merge: true });
+      alert("Perfil actualizado correctamente ");
     }
+    catch (error) {
+      console.error("Error al guardar perfil:", error);
+      alert("Error al guardar: " + error.message);
+    }
+  };
 
   return (
     <>
