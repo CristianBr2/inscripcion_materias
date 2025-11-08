@@ -47,8 +47,8 @@ function MesaExamen(){
   //eliminar mesa solo el admi puede
   const handleDelete = async (id) => {
     if (role !== "admin") return;
-    await deleteDoc(doc(db, "mesa_examen", id));
-    setMesas(prev => prev.filter(m => m.id !== id));
+    await updateDoc(doc(db, "mesa_examen", id), { activo: false }); //marcar inactivo en vez de eliminar
+    setMesas(prev => prev.filter(m => m.id !== id)); //actualiza para que no se vea
   };
 
   const startEditing = (mesa) => {
