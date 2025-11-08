@@ -51,6 +51,10 @@ function MiPerfil() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // guardar el perfil en firebas
+  const handleGuardar = async () => {
+    if (!user) return;
+
   return (
     <>
     
