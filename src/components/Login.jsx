@@ -72,8 +72,14 @@ function Login() {
       const user=auth.currentUser;
       console.log("usuario autenticado (Email/Pasword):", user.email);
     
-      const docRef = doc(db, "Usuario_Nuevo", user.uid);
+      const docRef = doc(db, "alumno", user.uid);
       const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists() && docSnap.data().activo === false) {
+      alert("Tu cuenta está inactiva ❌. Contacta con administración.");
+      await auth.signOut();
+      return;
+    }
 
       if (!docSnap.exists()) {
         await setDoc(docRef, { uid: user.uid, nombre: user.displayName || user.email, registrado: false });
