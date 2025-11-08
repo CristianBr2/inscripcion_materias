@@ -68,6 +68,10 @@ function MiPerfil() {
       if (formData.correo !== user.email) {
         await updateEmail(user, formData.correo);
       }
+
+      const ref = doc(db, "alumno", user.uid);
+      //  setDoc con merge:true para evitar errores si el doc no existe tva
+      await setDoc(ref, { ...formData, activo: true }, { merge: true });
     }
 
   return (
