@@ -80,6 +80,10 @@ function MiPerfil() {
     }
   };
 
+  // cuenta inactiva seria como eliminada
+  const handleEliminar = async () => {
+    if (!user) return;
+
   return (
     <>
     
