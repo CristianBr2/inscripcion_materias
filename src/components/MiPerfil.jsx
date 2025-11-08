@@ -92,7 +92,11 @@ function MiPerfil() {
       await signOut(auth);
       navigate("/login");
     }
-  }
+    catch (error) {
+      console.error("Error al marcar cuenta inactiva:", error);
+      alert("Error: " + error.message);
+    }
+  };
 
   return (
     <>
