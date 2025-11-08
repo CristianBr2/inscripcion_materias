@@ -55,6 +55,14 @@ function MiPerfil() {
   const handleGuardar = async () => {
     if (!user) return;
 
+    if (formData.dni.length !== 8) {
+      return alert("El DNI debe tener 8 dígitos");
+    }
+
+    if (formData.telefono.length !== 10) {
+      return alert("El teléfono debe tener 10 dígitos");
+    }
+
   return (
     <>
     
