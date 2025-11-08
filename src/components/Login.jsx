@@ -20,18 +20,31 @@ function Login() {
       const user = result.user;
       console.log("Usuario autenticado con Google: ",user);
 
-      const docRef = doc(db, "Usuario_Nuevo", user.uid);
+       const docRef = doc(db, "alumno", user.uid);
       const docSnap = await getDoc(docRef);
 
-      if (!docSnap.exists()){
-        await setDoc(docRef, {uid: user.uid, nombre: user.displayName, registrado: false});
-        console.log("Registro base creado en firebase para el usuario nuevo");
-        navigate("/registro", {state: {nombre: user.displayName} });
-      } else if (!docSnap.data().registrado){
-        navigate("/registro", {state: { nombre: user.displayName} });
-      }else{
-        navigate("/servicios");
-      }
+      // Si el usuario existe y está inactivo
+    if (docSnap.exists() && docSnap.data().activo === false) {
+      alert("Cuenta inactiva. Contacte a administracion.");
+      await auth.signOut();
+      return;
+    }
+
+      // sino existe, crear registro base
+      if (!docSnap.exists()) {
+        await setDoc(docRef, { uid: user.uid, nombre: user.displayName, registrado: false, activo: true });
+        navigate("/registro", { state: { nombre: user.displayName } });
+        return;
+      } 
+      
+      if (!docSnap.data().registrado) {
+      navigate("/registro", { state: { nombre: user.displayName } });
+      return;
+    }
+    
+    // Usuario activo y registrado → servicios
+    navigate("/servicios");
+
     }catch (error) {
       console.error("error al iniciar sesión con Google: ", error);
       setError("refresque e intente nuevamente");
