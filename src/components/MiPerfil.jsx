@@ -63,6 +63,13 @@ function MiPerfil() {
       return alert("El teléfono debe tener 10 dígitos");
     }
 
+    try{
+      // si cambio el correo, actualizarlo tmb en auth
+      if (formData.correo !== user.email) {
+        await updateEmail(user, formData.correo);
+      }
+    }
+
   return (
     <>
     
