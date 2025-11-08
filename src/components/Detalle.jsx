@@ -50,8 +50,8 @@ function Detalle() {
   //eliminar producto solo el admi puede
   const handleDelete = async (id) => {
     if (role !== "admin") return;
-    await deleteDoc(doc(db, "producto", id));
-    setProducto(prev => prev.filter(m => m.id !== id));
+    await updateDoc(doc(db, "producto", id), { activo: false }); //marcar inactivo en vez de eliminar
+    setProducto(prev => prev.filter(m => m.id !== id)); //actualiza para que no se vea
   };
 
   const startEditing = (producto) => {
