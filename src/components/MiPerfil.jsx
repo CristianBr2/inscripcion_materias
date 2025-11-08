@@ -171,6 +171,10 @@ function MiPerfil() {
       placeholder="Ingresa tu teléfono"
     />
       </div>
+       <div className="botonesPerfil">
+          <button className="guardarPerfil" onClick={handleGuardar}>Guardar</button>
+          <button className="eliminarPerfil" onClick={handleEliminar}>Eliminar cuenta</button>
+      </div>
     </div>
     </>
   );
