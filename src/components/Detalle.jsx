@@ -111,7 +111,7 @@ function Detalle() {
              <UserMenu />
               {role === "admin" && (
                  <div style={{ margin: "20px auto", width: "80%" }}>
-                   <h3 style={{ fontSize:"3vh",textAlign: "center", marginTop: "40px", color:"white", marginBottom:"20px"}}>Añadir nueva materia</h3>
+                   <h3 style={{ fontFamily:'sans-serif',fontSize:"3vh",textAlign: "center", marginTop: "40px", color:"white", marginBottom:"20px"}}>Añadir nueva materia</h3>
                    <input
                      name="nombremateria"
                      value={newProducto.nombremateria}
