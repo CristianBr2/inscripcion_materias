@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './MiPerfil.css';
+import { auth, db } from "../firebaseConfig";
+import {
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc
+} from "firebase/firestore";
+import { updateEmail, signOut } from "firebase/auth";
+import UserMenu from "./UserMenu";
+import "./MiPerfil.css";
 
 function MiPerfil() {
   const navigate = useNavigate();
+  
 
   return (
     <>
