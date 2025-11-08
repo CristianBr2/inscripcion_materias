@@ -16,6 +16,7 @@ body{
   border: 1px solid #ddd;
   color:white;
   font-size: 1.30rem;
+  font-family: sans-serif;
 }
 
 .addMesaForm {
