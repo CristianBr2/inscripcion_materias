@@ -104,6 +104,11 @@ function MiPerfil() {
       <UserMenu />
       <h1>Mi perfil</h1>
 
+      {formData.activo === false && (
+        <p style={{ color: "red", fontWeight: "bold" }}>
+          Tu cuenta está inactiva
+        </p>
+      )}
     </div>
     </>
   );
