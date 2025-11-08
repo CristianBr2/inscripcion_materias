@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
-import './Gracias.css'; // reutiliza tu CSS actual
+import './Gracias.css';
 
 export default function UserMenu() {
   const navigate = useNavigate();
@@ -12,10 +12,12 @@ export default function UserMenu() {
 
   const handleInicio = () => navigate('/servicios');
 
+  const handleMiPerfil = () => navigate('/miperfil');
+
   const handleLogout = async () => {
     try {
       await logout();
-      navigate('/');
+      navigate('');
     } catch (error) {
       console.error("Error al cerrar sesión:", error);
     }
@@ -27,6 +29,7 @@ export default function UserMenu() {
       {isMenuOpen && (
         <div className="dropdown-content">
           <button onClick={handleInicio} className="btn-menu">Inicio</button>
+          <button onClick={handleMiPerfil} className="btn-menu">Mi perfil</button>
           <button onClick={handleLogout} className="btn-menu">Cerrar Sesión</button>
         </div>
       )}
