@@ -100,7 +100,11 @@ function MiPerfil() {
 
   return (
     <>
-    
+    <div className="contenedorPerfil">
+      <UserMenu />
+      <h1>Mi perfil</h1>
+
+    </div>
     </>
   );
 }
