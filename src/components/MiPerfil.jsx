@@ -46,6 +46,11 @@ function MiPerfil() {
     }
   }, [user]);
 
+  // manejar cambios en el formulario
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
     
