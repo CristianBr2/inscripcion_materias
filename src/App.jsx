@@ -18,6 +18,7 @@ import InscriptoCorrectamente from "./components/InscriptoCorrectamente";
 import Contacto from "./components/Contacto"; 
 import Gracias from "./components/Gracias"; 
 import { UserProvider } from './context/UserContext.js';
+import MiPerfil from "./components/MiPerfil.jsx";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/InscriptoCorrectamente" element={<RutaPrivada requiredRole="usuario"><InscriptoCorrectamente /></RutaPrivada>} />
           <Route path="/Contacto" element={<RutaPrivada requiredRole="usuario"><Contacto /></RutaPrivada>} />
           <Route path="/Gracias" element={<RutaPrivada requiredRole="usuario"><Gracias /></RutaPrivada>} />
+                    <Route path="/MiPerfil" element={<RutaPrivada requiredRole="usuario"><MiPerfil /></RutaPrivada>} />
 
           
           <Route path="/mesa-examen" element={<RutaPrivada requiredRole="usuario"><UseMesaExamen /></RutaPrivada>} />
@@ -49,6 +51,7 @@ function App() {
 
           {/* Rutas para admin */}
           <Route path="/alta-mesa" element={<RutaPrivada requiredRole="admin"><AltaMesaExamen /></RutaPrivada>} />
+          
           
 
 
