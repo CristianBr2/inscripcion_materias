@@ -13,7 +13,18 @@ import "./MiPerfil.css";
 
 function MiPerfil() {
   const navigate = useNavigate();
-  
+  const user = auth.currentUser;
+  const [formData, setFormData] = useState({
+    nombre: "",
+    apellido: "",
+    dni: "",
+    correo: "",
+    curso: "",
+    telefono: "",
+    activo: true
+  });
+  const handleVolver = () => { navigate(-1); };
+
 
   return (
     <>
