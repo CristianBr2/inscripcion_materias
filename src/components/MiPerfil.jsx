@@ -25,6 +25,26 @@ function MiPerfil() {
   });
   const handleVolver = () => { navigate(-1); };
 
+  //cargar datos perfil
+  useEffect(() => {
+    if (user) {
+      const fetchPerfil = async () => {
+        const ref = doc(db, "alumno", user.uid);
+        const snap = await getDoc(ref);
+        if (snap.exists()) {
+          setFormData(snap.data());
+        } else {
+          // si no existe el doc crear uno
+          await setDoc(ref, {
+            ...formData,
+            correo: user.email,
+            activo: true,
+          });
+        }
+      };
+      fetchPerfil();
+    }
+  }, [user]);
 
   return (
     <>
