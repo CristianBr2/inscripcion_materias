@@ -47,9 +47,10 @@ function Registro() {
       return
     }
 
-    if (telefono.length!==10){
-      alert('El telefono debe ser de 10 dígitos.')
-      return
+    const phoneRegex = /^299\d{7}$/;
+    if (!phoneRegex.test(telefono)) {
+      alert('El teléfono debe comenzar con 299 seguido de 7 dígitos (ej: 2991234567)');
+      return;
     }
 
     const materiasNum = Number(materias);
@@ -250,16 +251,24 @@ function Registro() {
         label="Teléfono"
         required
         sx={{ width: 300 }}
-        type="text"
+        type="tel"
         value={telefono}
         inputProps={{
-          pattern: '[0-9]*',
+          pattern: '299[0-9]{7}',
           maxLength: 10,
+          title: 'El teléfono debe comenzar con 299 seguido de 7 dígitos (ej: 2991234567)'
         }}
-        onInput={(e) => 
-          setTelefono(e.target.value.replace(/[^0-9]/g, '').slice(0, 10))
-        }
-
+        onInput={(e) => {
+          // Remove any non-digit characters and limit to 10 digits
+          let value = e.target.value.replace(/[^0-9]/g, '');
+          // Ensure it starts with 299
+          if (!value.startsWith('299') && value.length > 0) {
+            value = '299' + value;
+          }
+          // Limit to 10 digits
+          setTelefono(value.slice(0, 10));
+        }}
+        placeholder="2991234567"
       />
 
       <TextField
